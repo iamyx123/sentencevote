@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>句子投稿 - G122班级屏幕</title>
     <!-- Font Awesome from BootCDN -->
-<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<!-- GSAP from BootCDN -->
-<script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css" />
+    <!-- GSAP from BootCDN -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css" />
     <style>
         :root {
             --primary-blue: #006adc;
@@ -30,7 +30,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-             font-family: "LXGW WenKai", sans-serif;
+            font-family: "LXGW WenKai", sans-serif;
         }
 
         body {
@@ -40,7 +40,6 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-
         }
 
         .container {
@@ -61,32 +60,32 @@
             overflow: hidden;
         }
 
-        header h1 {
-            position: relative;
-            z-index: 2;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-            font-size: 2.2rem;
-        }
+            header h1 {
+                position: relative;
+                z-index: 2;
+                margin-bottom: 0.5rem;
+                font-weight: 700;
+                font-size: 2.2rem;
+            }
 
-        header p {
-            position: relative;
-            z-index: 2;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-        }
+            header p {
+                position: relative;
+                z-index: 2;
+                opacity: 0.9;
+                max-width: 600px;
+                margin: 0 auto;
+                font-size: 1.1rem;
+            }
 
-        header .header-background {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            opacity: 0.1;
-        }
+            header .header-background {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                opacity: 0.1;
+            }
 
         .main-content {
             padding: 2rem 0;
@@ -103,10 +102,10 @@
             transition: var(--transition);
         }
 
-        .card:hover {
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-            transform: translateY(-5px);
-        }
+            .card:hover {
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                transform: translateY(-5px);
+            }
 
         .card-title {
             color: var(--primary-blue);
@@ -117,37 +116,37 @@
             gap: 0.5rem;
         }
 
-        .card-title i {
-            color: var(--primary-purple);
-        }
+            .card-title i {
+                color: var(--primary-purple);
+            }
 
         .input-group {
             margin-bottom: 1.5rem;
         }
 
-        .input-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-            font-weight: 500;
-        }
+            .input-group label {
+                display: block;
+                margin-bottom: 0.5rem;
+                color: var(--text-dark);
+                font-weight: 500;
+            }
 
-        .input-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 6px;
-            font-size: 1rem;
-            transition: var(--transition);
-            min-height: 100px;
-            resize: vertical;
-        }
+            .input-group textarea {
+                width: 100%;
+                padding: 0.8rem;
+                border: 2px solid #e0e0e0;
+                border-radius: 6px;
+                font-size: 1rem;
+                transition: var(--transition);
+                min-height: 100px;
+                resize: vertical;
+            }
 
-        .input-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-blue);
-            box-shadow: 0 0 0 3px rgba(0, 106, 220, 0.2);
-        }
+                .input-group textarea:focus {
+                    outline: none;
+                    border-color: var(--primary-blue);
+                    box-shadow: 0 0 0 3px rgba(0, 106, 220, 0.2);
+                }
 
         .btn {
             display: inline-flex;
@@ -165,22 +164,28 @@
             gap: 0.5rem;
         }
 
-        .btn:hover {
-            background-color: #0055b3;
-            transform: translateY(-2px);
-        }
+            .btn:hover {
+                background-color: #0055b3;
+                transform: translateY(-2px);
+            }
 
-        .btn:active {
-            transform: translateY(0);
-        }
+            .btn:active {
+                transform: translateY(0);
+            }
+
+            .btn:disabled {
+                background-color: #cccccc;
+                cursor: not-allowed;
+                transform: none;
+            }
 
         .btn-purple {
             background-color: var(--primary-purple);
         }
 
-        .btn-purple:hover {
-            background-color: #483994;
-        }
+            .btn-purple:hover {
+                background-color: #483994;
+            }
 
         .btn-outline {
             background-color: transparent;
@@ -188,10 +193,10 @@
             border: 2px solid var(--primary-blue);
         }
 
-        .btn-outline:hover {
-            background-color: var(--light-blue);
-            color: var(--primary-blue);
-        }
+            .btn-outline:hover {
+                background-color: var(--light-blue);
+                color: var(--primary-blue);
+            }
 
         .btn-container {
             display: flex;
@@ -216,23 +221,25 @@
             transform: translateY(20px);
         }
 
-        .sentence-item:nth-child(odd) {
-            border-left-color: var(--primary-purple);
-        }
+            .sentence-item:nth-child(odd) {
+                border-left-color: var(--primary-purple);
+            }
 
-        .sentence-item.high-score {
-            border-left: 4px solid var(--gold);
-            background-color: var(--light-gold);
-            animation: gold-pulse 2s infinite;
-        }
+            .sentence-item.high-score {
+                border-left: 4px solid var(--gold);
+                background-color: var(--light-gold);
+                animation: gold-pulse 2s infinite;
+            }
 
         @keyframes gold-pulse {
             0% {
                 box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
             }
+
             70% {
                 box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
             }
+
             100% {
                 box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
             }
@@ -268,6 +275,36 @@
             background-color: var(--primary-blue);
         }
 
+        .card.all-sentences {
+            display: flex;
+            flex-direction: column;
+        }
+
+            .card.all-sentences #all-sentences-container {
+                flex: 1;
+                overflow-y: auto;
+                max-height: 800px; /* 设置最大高度防止过长 */
+            }
+
+        /* 确保滚动条样式统一 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 4px;
+        }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #a8a8a8;
+            }
+
         .score-badge.high {
             background-color: var(--gold);
             color: var(--text-dark);
@@ -281,18 +318,18 @@
             gap: 0.5rem;
         }
 
-        .sentence-actions button {
-            background: none;
-            border: none;
-            font-size: 1rem;
-            cursor: pointer;
-            color: var(--text-light);
-            transition: var(--transition);
-        }
+            .sentence-actions button {
+                background: none;
+                border: none;
+                font-size: 1rem;
+                cursor: pointer;
+                color: var(--text-light);
+                transition: var(--transition);
+            }
 
-        .sentence-actions button:hover {
-            color: var(--primary-blue);
-        }
+                .sentence-actions button:hover {
+                    color: var(--primary-blue);
+                }
 
         .limit-indicator {
             display: flex;
@@ -303,20 +340,20 @@
             font-size: 0.9rem;
         }
 
-        .limit-indicator .progress {
-            flex: 1;
-            height: 6px;
-            background-color: #e0e0e0;
-            border-radius: 3px;
-            overflow: hidden;
-        }
+            .limit-indicator .progress {
+                flex: 1;
+                height: 6px;
+                background-color: #e0e0e0;
+                border-radius: 3px;
+                overflow: hidden;
+            }
 
-        .limit-indicator .progress-bar {
-            height: 100%;
-            background-color: var(--primary-blue);
-            border-radius: 3px;
-            transition: var(--transition);
-        }
+            .limit-indicator .progress-bar {
+                height: 100%;
+                background-color: var(--primary-blue);
+                border-radius: 3px;
+                transition: var(--transition);
+            }
 
         .notification {
             position: fixed;
@@ -336,33 +373,33 @@
             transition: var(--transition);
         }
 
-        .notification.success {
-            border-left: 4px solid #34c759;
-        }
+            .notification.success {
+                border-left: 4px solid #34c759;
+            }
 
-        .notification.error {
-            border-left: 4px solid #ff3b30;
-        }
+            .notification.error {
+                border-left: 4px solid #ff3b30;
+            }
 
-        .notification.warning {
-            border-left: 4px solid #ff9500;
-        }
+            .notification.warning {
+                border-left: 4px solid #ff9500;
+            }
 
-        .notification i {
-            font-size: 1.2rem;
-        }
+            .notification i {
+                font-size: 1.2rem;
+            }
 
-        .notification.success i {
-            color: #34c759;
-        }
+            .notification.success i {
+                color: #34c759;
+            }
 
-        .notification.error i {
-            color: #ff3b30;
-        }
+            .notification.error i {
+                color: #ff3b30;
+            }
 
-        .notification.warning i {
-            color: #ff9500;
-        }
+            .notification.warning i {
+                color: #ff9500;
+            }
 
         .loading-overlay {
             position: fixed;
@@ -401,16 +438,16 @@
             color: var(--text-light);
         }
 
-        .empty-state i {
-            font-size: 3rem;
-            color: var(--light-blue);
-            margin-bottom: 1rem;
-        }
+            .empty-state i {
+                font-size: 3rem;
+                color: var(--light-blue);
+                margin-bottom: 1rem;
+            }
 
-        .empty-state p {
-            margin-top: 0.5rem;
-            font-size: 1.1rem;
-        }
+            .empty-state p {
+                margin-top: 0.5rem;
+                font-size: 1.1rem;
+            }
 
         footer {
             background-color: #f1f3f5;
@@ -429,9 +466,9 @@
             display: none;
         }
 
-        .ai-score-container.visible {
-            display: block;
-        }
+            .ai-score-container.visible {
+                display: block;
+            }
 
         .ai-score-header {
             display: flex;
@@ -448,9 +485,9 @@
             gap: 0.5rem;
         }
 
-        .ai-score-title i {
-            color: var(--primary-purple);
-        }
+            .ai-score-title i {
+                color: var(--primary-purple);
+            }
 
         .ai-score-value {
             font-size: 1.5rem;
@@ -468,9 +505,9 @@
             display: none;
         }
 
-        .ai-score-bonus.visible {
-            display: block;
-        }
+            .ai-score-bonus.visible {
+                display: block;
+            }
 
         .ai-score-criteria {
             margin-top: 0.5rem;
@@ -501,46 +538,63 @@
         }
 
         /* 响应式布局更新 */
+        /* 响应式布局优化 */
         @media (min-width: 992px) {
             .main-content {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 3fr 2fr;
                 gap: 2rem;
+                grid-template-areas:
+                    "add add"
+                    "all user"
+                    "all stats";
             }
-            
+
             .card-full-width {
                 grid-column: 1 / -1;
+                grid-area: add;
+            }
+
+            .card.all-sentences {
+                grid-area: all;
+                height: 100%;
+            }
+
+            .card.user-sentences {
+                grid-area: user;
+            }
+
+            .card.user-stats {
+                grid-area: stats;
             }
         }
 
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
+        /* 为中等尺寸屏幕增加额外布局 */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .main-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+                grid-template-areas:
+                    "add add"
+                    "user stats"
+                    "all all";
             }
 
-            header p {
-                font-size: 1rem;
-                padding: 0 1rem;
+            .card-full-width {
+                grid-area: add;
             }
 
-            .card {
-                padding: 1.2rem;
+            .card.all-sentences {
+                grid-area: all;
             }
 
-            .btn-container {
-                justify-content: center;
+            .card.user-sentences {
+                grid-area: user;
             }
 
-            .sentence-actions {
-                position: relative;
-                right: auto;
-                top: auto;
-                margin-top: 0.5rem;
-                justify-content: flex-end;
-            }
-
-            .sentence-item {
-                padding-bottom: 2.5rem;
+            .card.user-stats {
+                grid-area: stats;
             }
         }
 
@@ -567,15 +621,15 @@
             gap: 0.8rem;
         }
 
-        .info-bubble i {
-            color: var(--primary-blue);
-            font-size: 1.2rem;
-        }
+            .info-bubble i {
+                color: var(--primary-blue);
+                font-size: 1.2rem;
+            }
 
-        .info-bubble p {
-            font-size: 0.95rem;
-            color: var(--text-dark);
-        }
+            .info-bubble p {
+                font-size: 0.95rem;
+                color: var(--text-dark);
+            }
 
         .counter {
             font-size: 0.9rem;
@@ -601,10 +655,10 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
-        .stat-card.bonus {
-            background-color: var(--light-gold);
-            border-left: 4px solid var(--gold);
-        }
+            .stat-card.bonus {
+                background-color: var(--light-gold);
+                border-left: 4px solid var(--gold);
+            }
 
         .stat-card-title {
             font-size: 0.9rem;
@@ -621,6 +675,449 @@
         .stat-card.bonus .stat-card-value {
             color: #8B6914;
         }
+
+        /* 新增: AI解释功能 */
+        .explanation-container {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #f0f5ff;
+            border-radius: 8px;
+            display: none;
+        }
+
+            .explanation-container.visible {
+                display: block;
+            }
+
+        .explanation-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .explanation-title {
+            font-weight: 600;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .explanation-textarea {
+            width: 100%;
+            min-height: 80px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 0.5rem;
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+            .explanation-textarea:focus {
+                outline: none;
+                border-color: var(--primary-blue);
+                box-shadow: 0 0 0 2px rgba(0, 106, 220, 0.1);
+            }
+
+        /* 新增: 模态框 */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1002;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+            .modal.visible {
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal.visible .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-header {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-light);
+            transition: color 0.2s ease;
+        }
+
+            .modal-close:hover {
+                color: var(--primary-blue);
+            }
+
+        .modal-body {
+            padding: 1rem;
+        }
+
+        .modal-footer {
+            padding: 1rem;
+            border-top: 1px solid #eee;
+            text-align: right;
+        }
+
+        /* 新增: 统计卡片 */
+        .stats-container {
+            margin-top: 1.5rem;
+        }
+
+        .stats-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+
+            .stat-item:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* 新增: 分享卡片 */
+        .share-card {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 比例 */
+            margin: 1rem 0;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .share-card-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .share-card-text {
+            font-size: 1.6rem;
+            font-weight: bold;
+            line-height: 1.4;
+            max-width: 80%;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        .share-card-footer {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            position: absolute;
+            bottom: 1rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* 新增: 标签页 */
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 1rem;
+        }
+
+        .tab {
+            padding: 0.7rem 1rem;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+            .tab:hover {
+                background-color: #f5f5f5;
+            }
+
+            .tab.active {
+                color: var(--primary-blue);
+                border-bottom-color: var(--primary-blue);
+            }
+
+        .tab-content {
+            display: none;
+        }
+
+            .tab-content.active {
+                display: block;
+            }
+
+        /* 新增: 分享按钮 */
+        .share-btn-container {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .share-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            background-color: #f8f9fa;
+            color: var(--text-dark);
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+            font-weight: 500;
+        }
+
+            .share-btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .share-btn.weixin {
+                background-color: #07C160;
+                color: white;
+            }
+
+            .share-btn.weibo {
+                background-color: #E6162D;
+                color: white;
+            }
+
+            .share-btn.qq {
+                background-color: #12B7F5;
+                color: white;
+            }
+
+            .share-btn.download {
+                background-color: var(--primary-blue);
+                color: white;
+            }
+
+            .share-btn.view {
+                background-color: var(--primary-purple);
+                color: white;
+            }
+
+        /* 新增: 用户名管理 */
+        .username-display {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            background-color: #f0f5ff;
+            border-radius: 8px;
+        }
+
+        .username-value {
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .username-edit {
+            color: var(--primary-purple);
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        /* 新增: 多句子分享功能 */
+        .multi-share-container {
+            margin-top: 1rem;
+        }
+
+        .multi-share-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-blue);
+        }
+
+        .multi-share-list {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .multi-share-item {
+            padding: 0.8rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .multi-share-item:last-child {
+                border-bottom: none;
+            }
+
+        .multi-share-checkbox {
+            margin-right: 0.5rem;
+        }
+
+        .multi-share-sentence {
+            flex: 1;
+        }
+
+        .multi-share-score {
+            margin-left: 0.5rem;
+            font-weight: 600;
+        }
+
+        /* 增强分享卡片样式 */
+        .share-card {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .share-card-decoration {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .share-card-user {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            z-index: 2;
+        }
+
+        .share-card-logo {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-purple);
+            z-index: 2;
+        }
+
+        .share-card-score {
+            position: absolute;
+            bottom: 3rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+            z-index: 2;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .share-card-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 新增: 统计数据展示 */
+        .user-stats-display {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #ddd;
+        }
+
+            .stats-row:last-child {
+                border-bottom: none;
+            }
+
+        .stats-label {
+            color: var(--text-light);
+        }
+
+        .stats-value {
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
     </style>
 </head>
 <body>
@@ -635,16 +1132,32 @@
     <div class="container main-content">
         <div class="card fade-in card-full-width">
             <h2 class="card-title"><i class="fas fa-pen-fancy"></i> 添加新句子</h2>
-            
+
+            <div class="username-display" id="username-display">
+                <i class="fas fa-user"></i>
+                <span>用户名: <span class="username-value" id="username-value">未设置</span></span>
+                <span class="username-edit" id="username-edit"><i class="fas fa-edit"></i> 修改</span>
+            </div>
+
             <div class="info-bubble">
                 <i class="fas fa-info-circle"></i>
-                <p>每位用户每天最多可以提交5个句子。请确保您分享的句子是积极向上的。添加完成后需要点击【提交】才可以完成投稿。<b>新功能：</b>AI将对您的句子进行打分(0-10分)！得分超过7分的句子将获得<b>2次额外提交机会</b>，并有<b>3倍</b>的展示概率！评分小于或等于2分的句子将无法提交哦～</p>
+                <p>每位用户每天最多可以提交5个句子。请确保您分享的句子是积极向上的。添加完成后需要点击【提交】才可以完成投稿。<b>新功能：</b>AI将对您的句子进行打分(0-10分)！得分超过7分的句子将获得<b>2次额外提交机会</b>，并有<b>3倍</b>的展示概率！评分小于或等于2分的句子将无法提交哦～你还可以向AI解释你的句子，帮助AI更好地理解。</p>
             </div>
 
             <div class="input-group">
                 <label for="sentence-input">请输入您喜欢的句子：</label>
                 <textarea id="sentence-input" placeholder="在这里输入您喜欢的句子..."></textarea>
                 <div class="counter" id="char-counter">0/20</div>
+            </div>
+
+            <div class="explanation-container" id="explanation-container">
+                <div class="explanation-header">
+                    <div class="explanation-title">
+                        <i class="fas fa-lightbulb"></i> 向AI解释您的句子背景
+                    </div>
+                </div>
+                <p class="explanation-description">帮助AI更好地理解您的句子含义，提高评分准确性（可选）：</p>
+                <textarea id="explanation-textarea" class="explanation-textarea" placeholder="例如：这句话出自哪本书、想表达什么、有什么特殊含义等..."></textarea>
             </div>
 
             <div class="ai-score-container" id="ai-score-container">
@@ -670,6 +1183,9 @@
             </div>
 
             <div class="btn-container">
+                <button class="btn" id="explain-btn">
+                    <i class="fas fa-lightbulb"></i> 向AI解释
+                </button>
                 <button class="btn" id="rate-btn">
                     <i class="fas fa-star"></i> 获取AI评分
                 </button>
@@ -700,9 +1216,9 @@
             </div>
         </div>
 
-        <div class="card fade-in">
+        <div class="card fade-in user-sentences">
             <h2 class="card-title"><i class="fas fa-list"></i> 您添加的句子</h2>
-            
+
             <div id="user-sentences-container">
                 <ul class="sentence-list" id="user-sentences">
                     <!-- 用户添加的句子将显示在这里 -->
@@ -721,9 +1237,9 @@
             </div>
         </div>
 
-        <div class="card fade-in">
+        <div class="card fade-in all-sentences">
             <h2 class="card-title"><i class="fas fa-quote-right"></i> 已收集的句子</h2>
-            
+
             <div id="all-sentences-container">
                 <ul class="sentence-list" id="all-sentences">
                     <!-- 所有已收集的句子将显示在这里 -->
@@ -735,11 +1251,103 @@
                 </div>
             </div>
         </div>
+
+        <div class="card fade-in user-stats">
+            <h2 class="card-title"><i class="fas fa-chart-line"></i> 个人统计</h2>
+
+            <div class="tabs">
+                <div class="tab active" data-tab="stats">统计概览</div>
+                <div class="tab" data-tab="share">分享我的句子</div>
+            </div>
+
+            <div class="tab-content active" id="stats-tab">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value" id="total-submitted-count">0</div>
+                        <div class="stat-label">总提交数</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="high-score-count">0</div>
+                        <div class="stat-label">高分句子</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="avg-score">0.0</div>
+                        <div class="stat-label">平均分数</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="bonus-earned">0</div>
+                        <div class="stat-label">获得额外次数</div>
+                    </div>
+                </div>
+
+                <div class="stats-container">
+                    <h3>我的高分句子</h3>
+                    <ul class="sentence-list" id="high-score-sentences">
+                        <!-- 高分句子将显示在这里 -->
+                    </ul>
+                    <div class="empty-state" id="empty-high-score">
+                        <i class="fas fa-trophy"></i>
+                        <h3>暂无高分句子</h3>
+                        <p>添加更多积极向上的句子，争取获得高分吧！</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="share-tab">
+                <!-- 单句分享 -->
+                <h3 class="multi-share-title">单句分享</h3>
+                <div class="share-card" id="share-card">
+                    <div class="share-card-decoration" id="share-card-decoration"></div>
+                    <div class="share-card-content">
+                        <div class="share-card-user" id="share-card-user">用户: <span id="share-username">未设置</span></div>
+                        <div class="share-card-logo">G122句子投稿</div>
+                        <div class="share-card-text" id="share-card-text">选择一个句子来创建分享卡片</div>
+                        <div class="share-card-score" id="share-card-score">评分: <span id="share-score">暂无</span></div>
+                        <div class="share-card-footer">我在G122班级屏幕上展示的句子</div>
+                    </div>
+                </div>
+
+                <div class="select-container">
+                    <label for="share-sentence-select">选择一个句子来分享：</label>
+                    <select id="share-sentence-select" class="form-control" style="width:100%; padding:0.6rem; margin-top:0.5rem; border-radius:6px; border:1px solid #ddd;">
+                        <option value="">-- 请选择一个句子 --</option>
+                    </select>
+                </div>
+
+                <div class="share-btn-container">
+                    <button class="share-btn download" id="share-download">
+                        <i class="fas fa-download"></i> 下载图片
+                    </button>
+                    <button class="share-btn view" id="share-view">
+                        <i class="fas fa-eye"></i> 查看大图
+                    </button>
+                </div>
+
+                <!-- 多句分享 -->
+                <div class="multi-share-container">
+                    <h3 class="multi-share-title">多句分享</h3>
+                    <p>选择多个句子一起分享您的统计数据</p>
+
+                    <div class="multi-share-list" id="multi-share-list">
+                        <!-- 多选句子列表将在这里生成 -->
+                    </div>
+
+                    <div class="share-btn-container">
+                        <button class="share-btn download" id="multi-share-download">
+                            <i class="fas fa-download"></i> 下载合集图片
+                        </button>
+                        <button class="share-btn view" id="multi-share-view">
+                            <i class="fas fa-eye"></i> 查看大图
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer>
         <div class="container">
-            <p>© 2025 句子投稿平台 - 让美好的文字传递下去 | 由<a href="https://iamyx.co" target="_blank" style="color: var(--primary-blue); text-decoration: none;">YX</a>制作，官网<a href="https://iamyx.co" target="_blank" style="color: var(--primary-purple); text-decoration: none;">iamyx.co</a></p>
+            <p>© 2025 句子投稿平台 - 让美好的文字传递下去 | 由<a href="https://a.com" target="_blank" style="color: var(--primary-blue); text-decoration: none;">YX</a>制作，官网<a href="https://a.com" target="_blank" style="color: var(--primary-purple); text-decoration: none;">a.com</a></p>
         </div>
     </footer>
 
@@ -754,22 +1362,60 @@
         <div class="loading-spinner"></div>
     </div>
 
+    <!-- 用户名输入模态框 -->
+    <div class="modal" id="username-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">设置用户名</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>请输入您的用户名，将用于记录您的句子投稿：</p>
+                <div class="input-group" style="margin-top: 1rem;">
+                    <input type="text" id="username-input" class="explanation-textarea" style="min-height: auto; padding: 0.8rem;" placeholder="请输入您的用户名">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" id="save-username-btn">保存</button>
+                <button class="btn btn-outline" id="cancel-username-btn">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分享图片查看模态框 -->
+    <div class="modal" id="share-view-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">分享图片</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>长按图片可以保存到手机：</p>
+                <div id="share-image-view-container" style="margin-top: 1rem; text-align: center;">
+                    <!-- 图片将在这里显示 -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" id="modal-close-view-btn">关闭</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         // 基础URL配置
-        const BASE_URL = window.location.pathname.includes('/sentence')
-            ? '/' 
-            : '/sentence/';
-        
+        const BASE_URL = window.location.pathname.includes('/sentence') ? '/' : '/sentence/';
         const FILE_PATH = "/%E3%80%90YX%E4%BA%91%E7%9B%98-%E5%85%B1%E4%BA%AB-1TB%E3%80%91/%E5%85%B6%E4%BB%96%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/%E7%94%B5%E6%95%99%E7%9A%84/votesen.txt";
-        const DOWNLOAD_URL = "https://iamyx.co/d/%E3%80%90YX%E4%BA%91%E7%9B%98-%E5%85%B1%E4%BA%AB-1TB%E3%80%91/%E5%85%B6%E4%BB%96%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/%E7%94%B5%E6%95%99%E7%9A%84/votesen.txt";
-        
+        const DOWNLOAD_URL = "https://a.com/d/%E3%80%90YX%E4%BA%91%E7%9B%98-%E5%85%B1%E4%BA%AB-1TB%E3%80%91/%E5%85%B6%E4%BB%96%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/%E7%94%B5%E6%95%99%E7%9A%84/votesen.txt";
+        const LOG_FILE_PATH = "/%E3%80%90YX%E4%BA%91%E7%9B%98-%E5%85%B1%E4%BA%AB-1TB%E3%80%91/%E5%85%B6%E4%BB%96%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/%E7%94%B5%E6%95%99%E7%9A%84/sentencevotelog.txt";
+        const LOG_DOWNLOAD_URL = "https://a.com/d/%E3%80%90YX%E4%BA%91%E7%9B%98-%E5%85%B1%E4%BA%AB-1TB%E3%80%91/%E5%85%B6%E4%BB%96%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/%E7%94%B5%E6%95%99%E7%9A%84/sentencevotelog.txt";
+
         // AI API配置
         const AI_CONFIG = {
             API_KEY: "xxx",
-            API_URL: "https://xxx/v1/chat/completions",
-            MODEL: "gpt-4o-mini"
+            API_URL: "xx",
+            MODEL: "deepseek-v3-0324"
         };
-        
+
         // Cookie 辅助函数
         const CookieUtil = {
             setCookie(name, value, days) {
@@ -777,8 +1423,8 @@
                 date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
                 const expires = "expires=" + date.toUTCString();
                 document.cookie = name + "=" + value + ";" + expires + ";path=/";
-                console.log(`Cookie set: ${name}=${value} (expires in ${days} days)`);
             },
+
             getCookie(name) {
                 const cookieName = name + "=";
                 const decodedCookie = decodeURIComponent(document.cookie);
@@ -790,81 +1436,94 @@
                     }
                     if (cookie.indexOf(cookieName) === 0) {
                         const value = cookie.substring(cookieName.length, cookie.length);
-                        console.log(`Cookie retrieved: ${name}=${value}`);
                         return value;
                     }
                 }
-                console.log(`Cookie not found: ${name}`);
                 return "";
             },
+
             getUserId() {
                 let userId = this.getCookie("sentence_user_id");
                 if (!userId) {
                     userId = "user_" + Date.now() + "_" + Math.random().toString(36).substring(2, 10);
                     this.setCookie("sentence_user_id", userId, 365);
-                    console.log(`Created new user ID: ${userId}`);
-                } else {
-                    console.log(`Using existing user ID: ${userId}`);
                 }
                 return userId;
             },
+
+            // 用户名管理
+            getUserName() {
+                let userName = localStorage.getItem("sentence_username");
+                return userName || "";
+            },
+
+            setUserName(name) {
+                localStorage.setItem("sentence_username", name);
+            },
+
             getUserSentencesKey() {
                 return `sentences_${this.getUserId()}`;
             },
-            getDeletedSentencesKey() {
-                return `deleted_sentences_${this.getUserId()}`;
+
+            getHighScoreSentencesKey() {
+                return `high_score_sentences_${this.getUserId()}`;
             },
+
             saveUserSubmittedSentences(sentences) {
                 const key = this.getUserSentencesKey();
                 localStorage.setItem(key, JSON.stringify(sentences));
-                console.log(`Saved user submitted sentences: ${sentences.length} items`);
             },
+
             getUserSubmittedSentences() {
                 const key = this.getUserSentencesKey();
                 const saved = localStorage.getItem(key);
                 const sentences = saved ? JSON.parse(saved) : [];
-                console.log(`Retrieved user submitted sentences: ${sentences.length} items`);
                 return sentences;
             },
-            saveDeletedSentences(sentences) {
-                const key = this.getDeletedSentencesKey();
+
+            // 高分句子记录（防止重复利用高分句子）
+            saveHighScoreSentences(sentences) {
+                const key = this.getHighScoreSentencesKey();
                 localStorage.setItem(key, JSON.stringify(sentences));
-                console.log(`Saved user deleted sentences: ${sentences.length} items`);
             },
-            getDeletedSentences() {
-                const key = this.getDeletedSentencesKey();
+
+            getHighScoreSentences() {
+                const key = this.getHighScoreSentencesKey();
                 const saved = localStorage.getItem(key);
                 const sentences = saved ? JSON.parse(saved) : [];
-                console.log(`Retrieved user deleted sentences: ${sentences.length} items`);
                 return sentences;
             },
-            addToDeletedSentences(sentence) {
-                const deletedSentences = this.getDeletedSentences();
-                if (!deletedSentences.includes(sentence)) {
-                    deletedSentences.push(sentence);
-                    this.saveDeletedSentences(deletedSentences);
-                    console.log(`Added sentence to deleted list: "${sentence.substring(0, 30)}..."`);
+
+            addToHighScoreSentences(sentence) {
+                const highScoreSentences = this.getHighScoreSentences();
+                if (!highScoreSentences.includes(sentence)) {
+                    highScoreSentences.push(sentence);
+                    this.saveHighScoreSentences(highScoreSentences);
                     return true;
                 }
                 return false;
             },
+
+            isHighScoreSentence(sentence) {
+                return this.getHighScoreSentences().includes(sentence);
+            },
+
             addToUserSubmittedSentences(sentence) {
                 const submittedSentences = this.getUserSubmittedSentences();
                 if (!submittedSentences.includes(sentence)) {
                     submittedSentences.push(sentence);
                     this.saveUserSubmittedSentences(submittedSentences);
-                    console.log(`Added sentence to user submitted list: "${sentence.substring(0, 30)}..."`);
                     return true;
                 }
                 return false;
             },
+
             removeFromUserSubmittedSentences(sentence) {
                 const submittedSentences = this.getUserSubmittedSentences();
                 const index = submittedSentences.indexOf(sentence);
                 if (index > -1) {
                     submittedSentences.splice(index, 1);
                     this.saveUserSubmittedSentences(submittedSentences);
-                    console.log(`Removed sentence from user submitted list: "${sentence.substring(0, 30)}..."`);
                     return true;
                 }
                 return false;
@@ -875,46 +1534,42 @@
         const SentenceScorer = {
             // 存储句子分数
             sentenceScores: {},
-            
+
             init() {
-                console.log("初始化AI评分系统...");
                 this.loadSavedScores();
             },
-            
+
             loadSavedScores() {
                 const saved = localStorage.getItem("sentence_scores");
                 if (saved) {
                     this.sentenceScores = JSON.parse(saved);
-                    console.log(`加载了 ${Object.keys(this.sentenceScores).length} 个已保存的句子评分`);
                 }
             },
-            
+
             saveScores() {
                 localStorage.setItem("sentence_scores", JSON.stringify(this.sentenceScores));
-                console.log(`保存了 ${Object.keys(this.sentenceScores).length} 个句子评分`);
             },
-            
-            async scoreSentence(sentence) {
+
+            async scoreSentence(sentence, explanation = "") {
                 if (!sentence || sentence.trim() === "") {
                     return { score: 0, feedback: "句子不能为空" };
                 }
-                
-                // 检查是否已经有评分
-                if (this.sentenceScores[sentence]) {
-                    console.log(`使用缓存的评分: ${this.sentenceScores[sentence].score} 分`);
-                    return this.sentenceScores[sentence];
-                }
-                
-                console.log(`对句子进行AI评分: "${sentence}"`);
-                
-                try {
-                    const prompt = `请根据以下标准对这个句子评分，从0到10分：
-- 评分标准：活泼，积极向上，有青春的活力。避免过于死板。
-- 请只返回JSON格式的评分和简短反馈，格式为：{"score": 数字, "feedback": "文字说明"}
-- 不要有其他任何文字内容。
 
-句子: "${sentence}"`;
-                    
+                // 清理和净化用户输入
+                const cleanSentence = this.sanitizeInput(sentence);
+                const cleanExplanation = this.sanitizeInput(explanation);
+
+                // 检查是否已经有评分 (如果没有解释或解释相同才使用缓存)
+                const cacheKey = cleanSentence + "_" + cleanExplanation;
+                if (this.sentenceScores[cacheKey]) {
+                    return this.sentenceScores[cacheKey];
+                }
+
+                try {
+                    // 安全构建提示词，防止注入攻击
+                    const prompt = this.buildSafePrompt(cleanSentence, cleanExplanation);
+
+                    // 使用安全的API调用方式
                     const response = await fetch(AI_CONFIG.API_URL, {
                         method: "POST",
                         headers: {
@@ -926,7 +1581,7 @@
                             messages: [
                                 {
                                     "role": "system",
-                                    "content": "你是一个句子评分助手，专门对中文句子进行打分。请始终用中文回复，并严格按照要求的JSON格式返回结果。"
+                                    "content": "你是一个句子评分助手，专门对中文句子进行打分。请始终用中文回复，并严格按照要求的JSON格式返回结果。无论用户提供什么，你只评估句子本身的积极性和活力。"
                                 },
                                 {
                                     "role": "user",
@@ -936,16 +1591,14 @@
                             max_tokens: 150
                         })
                     });
-                    
-                    const data = await response.json();
-                    
+
                     if (!response.ok) {
-                        throw new Error(`API错误: ${data.error?.message || '未知错误'}`);
+                        throw new Error(`API错误: ${response.status}`);
                     }
-                    
+
+                    const data = await response.json();
                     const content = data.choices[0].message.content;
-                    console.log(`API返回内容: ${content}`);
-                    
+
                     // 从返回内容中提取JSON
                     let result;
                     try {
@@ -960,33 +1613,60 @@
                             throw new Error("无法解析API返回的评分结果");
                         }
                     }
-                    
+
                     // 确保结果符合预期格式
                     if (!result || typeof result.score !== 'number') {
                         throw new Error("API返回的评分结果格式错误");
                     }
-                    
+
                     // 限制分数范围
                     result.score = Math.max(0, Math.min(10, result.score));
-                    
+
                     // 保存评分
-                    this.sentenceScores[sentence] = result;
+                    this.sentenceScores[cacheKey] = result;
                     this.saveScores();
-                    
-                    console.log(`句子评分结果: ${result.score} 分，反馈: ${result.feedback}`);
+
                     return result;
                 } catch (error) {
-                    console.error("评分失败:", error);
-                    return { score: 5, feedback: "评分过程出现错误，已分配默认分数" };
+                    // 评分失败，返回错误
+                    throw new Error(`评分失败: ${error.message}`);
                 }
             },
-            
+
+            // 安全净化用户输入
+            sanitizeInput(input) {
+                if (!input) return "";
+                // 移除可能的注入攻击字符
+                return input.trim()
+                    .replace(/[<>]/g, '')  // 移除尖括号
+                    .replace(/```/g, '');  // 移除代码块标记
+            },
+
+            // 构建安全的提示词
+            buildSafePrompt(sentence, explanation) {
+                let prompt = `请根据以下标准对这个句子评分，从0到10分：
+- 评分标准：活泼，积极向上，有青春的活力。避免过于死板。出现以下内容会降低评分：表白某人，讽刺某人，等不适宜在班级屏幕上展示，让别人感到不舒适的语句。鼓励展示小说，CP金句，名著，内容。对于诗词内容，小于6分，因为我们已经有很多诗词了，无需添加。对于不符合要求的句子，2分或以下；优秀的句子，7分或以上
+- 请只返回JSON格式的评分和简短反馈，格式为：{"score": 数字, "feedback": "文字说明"}
+- 不要有其他任何文字内容。
+
+句子: "${sentence}"`;
+
+                // 如果有解释，添加到提示词中
+                if (explanation && explanation.trim() !== "") {
+                    prompt += `\n\n用户提供的句子背景解释: "${explanation}"
+请参考这个解释来理解句子的背景，但仍然根据句子本身的积极性和活力进行评分。`;
+                }
+
+                return prompt;
+            },
+
             isHighScore(score) {
                 return score >= 7;
             },
-            
-            getSentenceScore(sentence) {
-                return this.sentenceScores[sentence] || null;
+
+            getSentenceScore(sentence, explanation = "") {
+                const cacheKey = this.sanitizeInput(sentence) + "_" + this.sanitizeInput(explanation);
+                return this.sentenceScores[cacheKey] || null;
             }
         };
 
@@ -994,27 +1674,31 @@
         const SubmissionLimitManager = {
             KEY_PREFIX: "sentence_submission_",
             BONUS_KEY_PREFIX: "sentence_bonus_submission_",
-            
-            getDailyKey() {
+
+            // 获取今天的日期字符串
+            getTodayDateStr() {
                 const now = new Date();
-                const dateStr = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
-                return `${this.KEY_PREFIX}${CookieUtil.getUserId()}_${dateStr}`;
+                return `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
             },
-            
+
+            getDailyKey() {
+                return `${this.KEY_PREFIX}${CookieUtil.getUserId()}_${this.getTodayDateStr()}`;
+            },
+
             getBonusKey() {
-                return `${this.BONUS_KEY_PREFIX}${CookieUtil.getUserId()}`;
+                return `${this.BONUS_KEY_PREFIX}${CookieUtil.getUserId()}_${this.getTodayDateStr()}`;
             },
-            
+
             getSubmissionCount() {
                 const count = localStorage.getItem(this.getDailyKey()) || 0;
                 return parseInt(count, 10);
             },
-            
+
             getBonusCount() {
                 const count = localStorage.getItem(this.getBonusKey()) || 0;
                 return parseInt(count, 10);
             },
-            
+
             incrementSubmissionCount(count = 1) {
                 const currentCount = this.getSubmissionCount();
                 const newCount = currentCount + count;
@@ -1022,61 +1706,63 @@
                 this.updateUI();
                 return newCount;
             },
-            
+
             addBonusSubmissions(count = 2) {
                 const currentCount = this.getBonusCount();
                 const newCount = currentCount + count;
                 localStorage.setItem(this.getBonusKey(), newCount);
                 this.updateUI();
-                console.log(`为用户添加 ${count} 次额外提交机会，当前总额外次数: ${newCount}`);
+
+                // 更新统计数据
+                StatsManager.incrementBonusEarned(count);
+
                 return newCount;
             },
-            
+
             useBonusSubmission() {
                 const currentCount = this.getBonusCount();
                 if (currentCount > 0) {
                     const newCount = currentCount - 1;
                     localStorage.setItem(this.getBonusKey(), newCount);
                     this.updateUI();
-                    console.log(`用户使用了1次额外提交机会，剩余: ${newCount}`);
                     return true;
                 }
                 return false;
             },
-            
+
             canSubmitMore(count = 1) {
                 const regularCount = this.getSubmissionCount();
                 const bonusCount = this.getBonusCount();
-                
+
                 // 如果常规提交次数未达上限，则可以提交
                 if (regularCount + count <= 5) {
                     return true;
                 }
-                
+
                 // 否则检查额外提交次数是否足够
                 const neededBonusSubmissions = count - (5 - regularCount);
                 return neededBonusSubmissions <= bonusCount;
             },
-            
+
             updateUI() {
                 const regularCount = this.getSubmissionCount();
                 const bonusCount = this.getBonusCount();
-                
+
                 // 更新常规提交计数
                 const regularCountElement = document.getElementById("regular-submission-count");
                 const regularProgressElement = document.getElementById("regular-submission-progress");
-                
+
                 if (regularCountElement) regularCountElement.textContent = regularCount;
                 if (regularProgressElement) regularProgressElement.style.width = `${(regularCount / 5) * 100}%`;
-                
+
                 // 更新额外提交计数
                 const bonusCountElement = document.getElementById("bonus-submission-count");
                 if (bonusCountElement) bonusCountElement.textContent = bonusCount;
-                
+
                 // 根据剩余提交次数更新添加按钮状态
                 const addButton = document.getElementById("add-btn");
                 const submitButton = document.getElementById("submit-all-btn");
-                
+
                 if (regularCount >= 5 && bonusCount <= 0) {
                     addButton.disabled = true;
                     addButton.classList.add("btn-outline");
@@ -1086,10 +1772,262 @@
                     addButton.classList.remove("btn-outline");
                     addButton.innerHTML = '<i class="fas fa-plus"></i> 添加句子';
                 }
-                
+
                 // 禁用提交按钮如果没有句子可提交
                 const userSentences = SentenceManager.getUserSentences();
-                submitButton.disabled = userSentences.length === 0;
+                if (submitButton) submitButton.disabled = userSentences.length === 0;
+            },
+
+            // 检查是否需要每日重置
+            checkDailyReset() {
+                const lastResetDate = localStorage.getItem("last_reset_date");
+                const today = this.getTodayDateStr();
+
+                if (lastResetDate !== today) {
+                    // 将额外提交次数重置，但保留用户的累计统计数据
+                    localStorage.setItem("last_reset_date", today);
+                }
+            }
+        };
+
+        // 统计管理器
+        const StatsManager = {
+            stats: {
+                totalSubmitted: 0,
+                highScoreCount: 0,
+                totalScores: 0,
+                scoreCount: 0,
+                bonusEarned: 0,
+                highScoreSentences: []
+            },
+
+            init() {
+                this.loadStats();
+                this.updateStatsUI();
+            },
+
+            loadStats() {
+                const savedStats = localStorage.getItem("user_stats");
+                if (savedStats) {
+                    this.stats = JSON.parse(savedStats);
+                    // 确保所有必要字段存在
+                    this.stats.highScoreSentences = this.stats.highScoreSentences || [];
+                    this.stats.bonusEarned = this.stats.bonusEarned || 0;
+                }
+            },
+
+            saveStats() {
+                localStorage.setItem("user_stats", JSON.stringify(this.stats));
+                this.updateStatsUI();
+            },
+
+            // 更新统计显示
+            updateStatsUI() {
+                document.getElementById("total-submitted-count").textContent = this.stats.totalSubmitted;
+                document.getElementById("high-score-count").textContent = this.stats.highScoreCount;
+
+                // 计算平均分
+                const avgScore = this.stats.scoreCount > 0
+                    ? (this.stats.totalScores / this.stats.scoreCount).toFixed(1)
+                    : "0.0";
+                document.getElementById("avg-score").textContent = avgScore;
+
+                document.getElementById("bonus-earned").textContent = this.stats.bonusEarned;
+
+                // 更新高分句子列表
+                this.updateHighScoreSentencesList();
+
+                // 更新分享选择器
+                this.updateShareSelect();
+
+                // 更新多句分享列表
+                this.updateMultiShareList();
+
+                // 更新用户名显示
+                this.updateUsernameDisplay();
+            },
+
+            // 更新用户名显示
+            updateUsernameDisplay() {
+                const username = CookieUtil.getUserName();
+                const usernameValueElement = document.getElementById("username-value");
+                const shareUsernameElement = document.getElementById("share-username");
+
+                if (usernameValueElement && username) {
+                    usernameValueElement.textContent = username;
+                } else if (usernameValueElement) {
+                    usernameValueElement.textContent = "未设置";
+                }
+
+                if (shareUsernameElement && username) {
+                    shareUsernameElement.textContent = username;
+                } else if (shareUsernameElement) {
+                    shareUsernameElement.textContent = "未设置";
+                }
+            },
+
+            // 更新高分句子列表
+            updateHighScoreSentencesList() {
+                const container = document.getElementById("high-score-sentences");
+                const emptyState = document.getElementById("empty-high-score");
+
+                if (!container) return;
+
+                container.innerHTML = "";
+
+                if (this.stats.highScoreSentences && this.stats.highScoreSentences.length > 0) {
+                    emptyState.style.display = "none";
+
+                    this.stats.highScoreSentences.forEach((item, index) => {
+                        const li = document.createElement("li");
+                        li.className = "sentence-item high-score";
+
+                        li.innerHTML = `
+                                <div class="sentence-text">${item.text}</div>
+                                <div class="sentence-meta">
+                                    <div class="sentence-score">
+                                        <i class="fas fa-trophy"></i>
+                                        <span class="score-badge high">${item.score.toFixed(1)}分</span>
+                                    </div>
+                                    <div>${item.date || ""}</div>
+                                </div>
+                            `;
+
+                        container.appendChild(li);
+                    });
+
+                    // 为新添加的元素添加动画
+                    gsap.fromTo(
+                        "#high-score-sentences .sentence-item",
+                        { opacity: 0, y: 20 },
+                        { opacity: 1, y: 0, stagger: 0.1, duration: 0.5 }
+                    );
+                } else {
+                    emptyState.style.display = "block";
+                }
+            },
+
+            // 更新分享选择器
+            updateShareSelect() {
+                const select = document.getElementById("share-sentence-select");
+                if (!select) return;
+
+                // 清空现有选项
+                select.innerHTML = '<option value="">-- 请选择一个句子 --</option>';
+
+                // 添加用户的所有已提交句子
+                const userSentences = CookieUtil.getUserSubmittedSentences();
+                userSentences.forEach(sentence => {
+                    const option = document.createElement("option");
+                    option.value = sentence;
+                    option.textContent = sentence.length > 20 ? sentence.substring(0, 20) + "..." : sentence;
+                    select.appendChild(option);
+                });
+
+                // 如果没有句子，禁用分享按钮
+                const shareButtons = document.querySelectorAll(".share-btn");
+                shareButtons.forEach(btn => {
+                    btn.disabled = userSentences.length === 0;
+                    if (userSentences.length === 0) {
+                        btn.classList.add("disabled");
+                    } else {
+                        btn.classList.remove("disabled");
+                    }
+                });
+            },
+
+            // 更新多句分享列表
+            updateMultiShareList() {
+                const container = document.getElementById("multi-share-list");
+                if (!container) return;
+
+                container.innerHTML = "";
+
+                // 获取用户提交的句子和对应的分数
+                const userSentences = CookieUtil.getUserSubmittedSentences();
+
+                if (userSentences.length === 0) {
+                    container.innerHTML = `<div class="empty-state" style="padding: 1.5rem;">
+                            <i class="fas fa-info-circle"></i>
+                            <p>您还没有提交任何句子</p>
+                        </div>`;
+                    return;
+                }
+
+                userSentences.forEach((sentence, index) => {
+                    // 获取句子评分
+                    const scoreObj = SentenceScorer.getSentenceScore(sentence);
+                    const score = scoreObj ? scoreObj.score : null;
+                    const isHighScore = score && SentenceScorer.isHighScore(score);
+
+                    const div = document.createElement("div");
+                    div.className = "multi-share-item";
+
+                    div.innerHTML = `
+                            <label class="multi-share-checkbox-label">
+                                <input type="checkbox" class="multi-share-checkbox" data-sentence="${sentence}" ${index < 3 ? 'checked' : ''}>
+                                <span class="multi-share-sentence">${sentence}</span>
+                            </label>
+                            ${score ? `<span class="multi-share-score" style="color: ${isHighScore ? '#FFD700' : '#006adc'};">${score.toFixed(1)}分</span>` : ''}
+                        `;
+
+                    container.appendChild(div);
+                });
+            },
+
+            // 增加提交计数
+            incrementSubmitted(count = 1) {
+                this.stats.totalSubmitted += count;
+                this.saveStats();
+            },
+
+            // 增加高分句子计数
+            addHighScoreSentence(sentence, score) {
+                this.stats.highScoreCount++;
+
+                // 添加到高分句子列表
+                const today = new Date();
+                const dateStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+                this.stats.highScoreSentences.push({
+                    text: sentence,
+                    score: score,
+                    date: dateStr
+                });
+
+                // 保持最多显示10个高分句子
+                if (this.stats.highScoreSentences.length > 10) {
+                    this.stats.highScoreSentences.shift();
+                }
+
+                this.saveStats();
+            },
+
+            // 添加分数
+            addScore(score) {
+                this.stats.totalScores += score;
+                this.stats.scoreCount++;
+                this.saveStats();
+            },
+
+            // 增加获得的额外次数
+            incrementBonusEarned(count = 2) {
+                this.stats.bonusEarned += count;
+                this.saveStats();
+            },
+
+            // 获取用户统计摘要（用于分享）
+            getUserStatsSummary() {
+                const avgScore = this.stats.scoreCount > 0
+                    ? (this.stats.totalScores / this.stats.scoreCount).toFixed(1)
+                    : "0.0";
+
+                return {
+                    totalSubmitted: this.stats.totalSubmitted,
+                    highScoreCount: this.stats.highScoreCount,
+                    avgScore: avgScore,
+                    bonusEarned: this.stats.bonusEarned
+                };
             }
         };
 
@@ -1099,21 +2037,20 @@
             userSentences: [],
             userSentencesWithScores: [], // 存储带有分数的用户句子
             sentenceLastModified: null,
-            
+            explanation: "", // 存储当前句子的解释
+
             init() {
-                console.log("初始化句子管理器...");
                 this.loadUserSentences();
                 this.fetchAllSentences();
             },
-            
+
             loadUserSentences() {
-                console.log("加载用户句子...");
                 this.userSentencesWithScores = [];
-                
+
                 // 从本地存储加载基础句子
                 const saved = localStorage.getItem("user_sentences");
                 this.userSentences = saved ? JSON.parse(saved) : [];
-                
+
                 // 尝试加载带分数的句子
                 const savedWithScores = localStorage.getItem("user_sentences_with_scores");
                 if (savedWithScores) {
@@ -1128,132 +2065,152 @@
                         });
                     });
                 }
-                
-                console.log(`已加载 ${this.userSentences.length} 个用户句子`);
+
                 this.renderUserSentences();
                 this.updateEmptyStates();
             },
-            
+
             saveUserSentences() {
-                console.log(`保存 ${this.userSentences.length} 个用户句子`);
-                
                 // 保存基本句子列表
                 localStorage.setItem("user_sentences", JSON.stringify(this.userSentences));
-                
+
                 // 保存带分数的句子列表
                 localStorage.setItem("user_sentences_with_scores", JSON.stringify(this.userSentencesWithScores));
-                
+
                 this.renderUserSentences();
                 this.updateEmptyStates();
                 SubmissionLimitManager.updateUI();
             },
-            
-            async addUserSentence(sentence, scoreResult = null) {
-                console.log(`尝试添加句子: "${sentence.substring(0, 30)}..."`);
-                
+
+            async addUserSentence(sentence, scoreResult = null, explanation = "") {
                 if (sentence.trim() === "") {
-                    console.log("拒绝添加: 句子为空");
                     UIManager.showNotification("句子不能为空", "error");
                     return false;
                 }
-                
+
                 if (sentence.length > 20) {
-                    console.log("拒绝添加: 句子过长");
                     UIManager.showNotification("句子不能超过20个字符，你的句子长长长长啦，电脑屏幕显示不下哦！", "error");
                     return false;
                 }
-                
+
+                // 检查是否与现有句子重复
                 if (this.userSentences.includes(sentence)) {
-                    console.log("拒绝添加: 句子已存在");
                     UIManager.showNotification("您已经添加过这个句子了", "warning");
                     return false;
                 }
-                
+
+                // 检查是否是已记录的高分句子 (防止重复上传高分句子获取奖励)
+                if (CookieUtil.isHighScoreSentence(sentence)) {
+                    UIManager.showNotification("您已经提交过这个高分句子，不能再次添加", "warning");
+                    return false;
+                }
+
+                // 检查是否复制了已有句子
+                if (this.isCopiedSentence(sentence)) {
+                    UIManager.showNotification("这个句子已经被他人上传，请分享您自己的句子", "error");
+                    return false;
+                }
+
                 if (!SubmissionLimitManager.canSubmitMore()) {
-                    console.log("拒绝添加: 今日提交已达上限");
                     UIManager.showNotification("今日提交已达上限", "error");
                     return false;
                 }
-                
+
                 // 如果没有提供评分结果，则进行评分
                 if (!scoreResult) {
-                    console.log("没有提供评分结果，正在获取评分...");
-                    UIManager.showLoading(true);
-                    scoreResult = await SentenceScorer.scoreSentence(sentence);
-                    UIManager.showLoading(false);
+                    try {
+                        UIManager.showLoading(true);
+                        scoreResult = await SentenceScorer.scoreSentence(sentence, explanation);
+                        UIManager.showLoading(false);
+                    } catch (error) {
+                        UIManager.showLoading(false);
+                        UIManager.showNotification("评分失败，无法添加句子：" + error.message, "error");
+                        return false;
+                    }
                 }
-                
+
                 // 检查评分是否太低
                 if (scoreResult.score <= 2) {
-                    console.log(`拒绝添加: 评分太低 (${scoreResult.score}分)`);
                     UIManager.showNotification(`这句话可能不太符合我们的积极向上的主题哦，您可以尝试换一句更积极的表达～`, "warning");
                     return false;
                 }
-                
+
                 // 添加到基本句子列表
                 this.userSentences.push(sentence);
-                
+
                 // 添加到带分数的句子列表
                 this.userSentencesWithScores.push({
                     text: sentence,
                     score: scoreResult.score,
-                    feedback: scoreResult.feedback
+                    feedback: scoreResult.feedback,
+                    explanation: explanation
                 });
-                
-                // 如果分数高，添加额外提交机会
+
+                // 更新统计数据
+                StatsManager.addScore(scoreResult.score);
+
+                // 如果分数高，添加额外提交机会，并记录为高分句子
                 if (SentenceScorer.isHighScore(scoreResult.score)) {
-                    console.log(`句子得分高(${scoreResult.score}分)，添加额外提交机会`);
                     SubmissionLimitManager.addBonusSubmissions(2);
+                    StatsManager.addHighScoreSentence(sentence, scoreResult.score);
+
+                    // 记录为高分句子，防止重复利用
+                    CookieUtil.addToHighScoreSentences(sentence);
+
                     UIManager.showNotification(`句子评分为${scoreResult.score}分，获得2次额外提交机会！`, "success");
                 } else {
                     UIManager.showNotification(`句子添加成功，评分为${scoreResult.score}分`, "success");
                 }
-                
+
                 this.saveUserSentences();
-                console.log("句子添加成功");
                 return true;
             },
-            
+
             removeUserSentence(index) {
                 const sentence = this.userSentences[index];
-                console.log(`移除句子 #${index}: "${sentence.substring(0, 30)}..."`);
-                
-                // 添加到已删除句子列表
-                CookieUtil.addToDeletedSentences(sentence);
-                
+
                 // 从用户句子列表中删除
                 this.userSentences.splice(index, 1);
                 this.userSentencesWithScores.splice(index, 1);
-                
+
                 this.saveUserSentences();
                 UIManager.showNotification("句子已移除", "success");
             },
-            
+
             getUserSentences() {
                 return this.userSentences;
             },
-            
+
             getUserSentencesWithScores() {
                 return this.userSentencesWithScores;
             },
-            
+
             clearUserSentences() {
-                console.log("清空用户句子列表");
                 this.userSentences = [];
                 this.userSentencesWithScores = [];
                 this.saveUserSentences();
             },
-            
+
+            // 检查句子是否是复制其他人已有句子
+            isCopiedSentence(sentence) {
+                // 检查用户已提交的句子不算复制
+                const userSubmitted = CookieUtil.getUserSubmittedSentences();
+                if (userSubmitted.includes(sentence)) return false;
+
+                // 检查所有已收集的句子
+                return this.allSentences.some(existing =>
+                    existing.text.toLowerCase() === sentence.toLowerCase() && !existing.isUserSubmitted
+                );
+            },
+
             async fetchAllSentences() {
-                console.log("获取所有已提交的句子...");
                 try {
                     UIManager.showLoading(true);
-                    
+
                     // 添加缓存破坏参数，确保每次都获取最新版本
                     const cacheBuster = `?cache=${Date.now()}`;
                     const requestURL = `${DOWNLOAD_URL}${cacheBuster}`;
-                    console.log(`使用缓存破坏URL: ${requestURL}`);
-                    
+
                     const response = await fetch(requestURL, {
                         method: 'GET',
                         headers: {
@@ -1262,21 +2219,18 @@
                             'Expires': '0'
                         }
                     });
-                    
+
                     if (!response.ok) {
                         throw new Error(`无法获取句子列表，状态码: ${response.status}`);
                     }
-                    
+
                     // 获取Last-Modified头
                     this.sentenceLastModified = response.headers.get('Last-Modified');
-                    console.log(`文件最后修改时间: ${this.sentenceLastModified}`);
-                    
+
                     const text = await response.text();
                     this.parseAllSentences(text);
-                    console.log(`成功获取句子，共 ${this.allSentences.length} 个`);
-                    
+
                 } catch (error) {
-                    console.error("获取句子失败:", error);
                     UIManager.showNotification("获取句子列表失败，请稍后再试", "error");
                     this.allSentences = [];
                 } finally {
@@ -1285,162 +2239,162 @@
                     this.updateEmptyStates();
                 }
             },
-            
+
             parseAllSentences(text) {
-                console.log("解析所有句子...");
                 // 分行并过滤空行
                 const lines = text.split('\n')
                     .map(line => line.trim())
                     .filter(line => line.length > 0);
-                
+
                 // 找出重复的句子，这可能是高分句子
                 const sentenceCounts = {};
                 lines.forEach(line => {
                     sentenceCounts[line] = (sentenceCounts[line] || 0) + 1;
                 });
-                
+
                 // 创建带有重复计数的句子列表
                 this.allSentences = Object.keys(sentenceCounts).map(sentence => ({
                     text: sentence,
                     count: sentenceCounts[sentence],
                     isHighScore: sentenceCounts[sentence] >= 3
                 }));
-                
-                console.log(`处理了 ${lines.length} 行文本，得到 ${this.allSentences.length} 个不同的句子`);
-                console.log(`其中 ${this.allSentences.filter(s => s.isHighScore).length} 个句子是高分句子`);
-                
+
                 // 标记用户已提交的句子
                 this.markUserSubmittedSentences();
             },
-            
+
             markUserSubmittedSentences() {
-                console.log("标记用户已提交的句子...");
                 const userSubmitted = CookieUtil.getUserSubmittedSentences();
-                let foundCount = 0;
-                
+
                 this.allSentences.forEach(sentence => {
                     if (userSubmitted.includes(sentence.text)) {
                         sentence.isUserSubmitted = true;
-                        foundCount++;
                     } else {
                         sentence.isUserSubmitted = false;
                     }
                 });
-                
-                console.log(`在所有句子中找到 ${foundCount} 个用户提交的句子`);
             },
-            
+
             renderUserSentences() {
-                console.log("渲染用户句子列表...");
                 const container = document.getElementById("user-sentences");
+                if (!container) return;
+
                 container.innerHTML = "";
-                
+
                 this.userSentencesWithScores.forEach((sentenceObj, index) => {
                     const li = document.createElement("li");
                     li.className = "sentence-item";
-                    
+
                     // 如果有高分，添加高分样式
                     if (sentenceObj.score && SentenceScorer.isHighScore(sentenceObj.score)) {
                         li.classList.add("high-score");
                     }
-                    
+
                     // 构建HTML内容
                     let html = `<div class="sentence-text">${sentenceObj.text}</div>`;
-                    
+
                     // 如果有分数，显示分数
                     if (sentenceObj.score !== null) {
                         const scoreClass = SentenceScorer.isHighScore(sentenceObj.score) ? "high" : "";
                         html += `
-                            <div class="sentence-meta">
-                                <div class="sentence-score">
-                                    AI评分: <span class="score-badge ${scoreClass}">${sentenceObj.score.toFixed(1)}</span>
+                                <div class="sentence-meta">
+                                    <div class="sentence-score">
+                                        AI评分: <span class="score-badge ${scoreClass}">${sentenceObj.score.toFixed(1)}</span>
+                                    </div>
+                                    <div class="sentence-feedback">${sentenceObj.feedback || ""}</div>
                                 </div>
-                                <div class="sentence-feedback">${sentenceObj.feedback || ""}</div>
+                            `;
+                    }
+
+                    // 如果有解释，显示解释
+                    if (sentenceObj.explanation && sentenceObj.explanation.trim() !== "") {
+                        html += `
+                                <div class="sentence-explanation" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666; background: #f5f5f5; padding: 0.5rem; border-radius: 4px;">
+                                    <i class="fas fa-lightbulb"></i> 解释: ${sentenceObj.explanation}
+                                </div>
+                            `;
+                    }
+
+                    html += `
+                            <div class="sentence-actions">
+                                <button title="移除句子" data-index="${index}">
+                                    <i class="fas fa-times"></i>
+                                </button>
                             </div>
                         `;
-                    }
-                    
-                    html += `
-                        <div class="sentence-actions">
-                            <button title="移除句子" data-index="${index}">
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </div>
-                    `;
-                    
+
                     li.innerHTML = html;
-                    
+
                     const removeBtn = li.querySelector(".sentence-actions button");
                     removeBtn.addEventListener("click", () => {
                         this.removeUserSentence(index);
                     });
-                    
+
                     container.appendChild(li);
                 });
-                
-                console.log(`渲染了 ${this.userSentencesWithScores.length} 个用户句子`);
-                
+
                 // 为新添加的元素添加淡入动画
                 gsap.fromTo(
-                    ".sentence-item", 
-                    { opacity: 0, y: 20 }, 
+                    ".sentence-item",
+                    { opacity: 0, y: 20 },
                     { opacity: 1, y: 0, stagger: 0.1, duration: 0.5 }
                 );
             },
-            
+
             renderAllSentences() {
-                console.log("渲染所有句子列表...");
                 const container = document.getElementById("all-sentences");
+                if (!container) return;
+
                 container.innerHTML = "";
-                
+
                 // 获取用户已提交的句子
                 const userSubmitted = CookieUtil.getUserSubmittedSentences();
-                
+
                 this.allSentences.forEach((sentenceObj, index) => {
                     const li = document.createElement("li");
                     li.className = "sentence-item";
-                    
+
                     // 如果是高分句子，添加高分样式
                     if (sentenceObj.isHighScore) {
                         li.classList.add("high-score");
                     }
-                    
+
                     // 检查是否是用户提交的句子
                     const isUserSubmitted = sentenceObj.isUserSubmitted;
-                    
+
                     // 构建HTML内容
                     let html = `<div class="sentence-text">${sentenceObj.text}</div>`;
-                    
+
                     // 添加重复次数和高分标签
                     if (sentenceObj.count > 1) {
                         html += `
-                            <div class="sentence-meta">
-                                ${sentenceObj.isHighScore ? 
-                                  '<div class="sentence-score"><i class="fas fa-trophy"></i> <span class="score-badge high">高分句子</span></div>' : 
-                                  `<div>出现次数: ${sentenceObj.count}</div>`}
-                            </div>
-                        `;
+                                <div class="sentence-meta">
+                                    ${sentenceObj.isHighScore ?
+                                '<div class="sentence-score"><i class="fas fa-trophy"></i> <span class="score-badge high">高分句子</span></div>' :
+                                `<div>出现次数: ${sentenceObj.count}</div>`}
+                                </div>
+                            `;
                     }
-                    
+
                     // 如果是用户提交的，显示删除按钮
                     if (isUserSubmitted) {
                         html += `
-                            <div class="sentence-actions">
-                                <button title="立即从系统中删除此句子" data-sentence="${sentenceObj.text}">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                            </div>
-                        `;
-                        
+                                <div class="sentence-actions">
+                                    <button title="立即从系统中删除此句子" data-sentence="${sentenceObj.text}">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            `;
+
                         // 添加特殊样式标记这是用户自己的句子
                         li.style.borderLeftColor = "#34c759";
                         if (!sentenceObj.isHighScore) {
                             li.style.backgroundColor = "#f0fff0";
                         }
                     }
-                    
+
                     li.innerHTML = html;
-                    
+
                     // 为删除按钮添加点击事件
                     if (isUserSubmitted) {
                         const deleteBtn = li.querySelector(".sentence-actions button");
@@ -1448,45 +2402,39 @@
                             this.deleteSentenceFromAll(sentenceObj.text);
                         });
                     }
-                    
+
                     container.appendChild(li);
                 });
-                
-                console.log(`渲染了 ${this.allSentences.length} 个句子`);
-                
+
                 // 为新添加的元素添加淡入动画
                 gsap.fromTo(
-                    "#all-sentences .sentence-item", 
-                    { opacity: 0, y: 20 }, 
+                    "#all-sentences .sentence-item",
+                    { opacity: 0, y: 20 },
                     { opacity: 1, y: 0, stagger: 0.05, duration: 0.5, delay: 0.2 }
                 );
             },
-            
+
             async deleteSentenceFromAll(sentence) {
                 // 显示确认对话框
                 if (!confirm("确定要删除这个句子吗？删除后将立即从系统中移除。")) {
                     return; // 用户取消删除
                 }
-                
-                console.log(`立即从系统中删除句子: "${sentence.substring(0, 30)}..."`);
-                
+
                 try {
                     UIManager.showLoading(true);
                     UIManager.showNotification("正在删除句子...", "info");
-                    
+
                     // 再次获取最新的文件内容，确保我们有最新版本
-                    console.log("获取最新文件内容...");
                     await this.fetchAllSentences();
-                    
+
                     // 检查句子是否仍然存在
                     const sentenceExists = this.allSentences.some(s => s.text === sentence);
                     if (!sentenceExists) {
-                        console.log("句子已不存在，可能已被其他用户删除");
                         UIManager.showNotification("句子已不存在，可能已被其他用户删除", "warning");
                         UIManager.showLoading(false);
                         return;
                     }
-                    
+
                     // 将所有句子展开为普通文本列表（考虑重复句子）
                     let allLines = [];
                     this.allSentences.forEach(s => {
@@ -1496,24 +2444,23 @@
                             }
                         }
                     });
-                    
-                    console.log(`从列表中移除句子后剩余 ${allLines.length} 行`);
-                    
+
                     // 合并为文本
                     const newContent = allLines.join('\n');
-                    
-                    // 直接上传不含已删除句子的文件
+
+                    // 上传不含已删除句子的文件
                     const success = await this.uploadSentences(newContent);
-                    
+
                     if (success) {
-                        console.log("句子删除成功");
-                        
                         // 将句子从用户提交记录中移除
                         CookieUtil.removeFromUserSubmittedSentences(sentence);
-                        
+
+                        // 记录删除操作
+                        await this.logSentenceAction('delete', [sentence]);
+
                         // 重新获取所有句子
                         await this.fetchAllSentences();
-                        
+
                         UIManager.showNotification("句子已成功删除，正在刷新...", "success");
                         setTimeout(() => {
                             // 使用强制刷新，完全绕过缓存
@@ -1523,53 +2470,55 @@
                         UIManager.showNotification("句子删除失败，请稍后再试", "error");
                     }
                 } catch (error) {
-                    console.error("删除句子失败:", error);
                     UIManager.showNotification("删除失败，请稍后再试", "error");
                 } finally {
                     UIManager.showLoading(false);
                 }
             },
-            
+
             updateEmptyStates() {
-                console.log("更新空状态显示...");
                 const emptyUserState = document.getElementById("empty-user-sentences");
                 const emptyAllState = document.getElementById("empty-all-sentences");
-                
+
                 if (this.userSentences.length > 0) {
                     emptyUserState.style.display = "none";
                 } else {
                     emptyUserState.style.display = "block";
                 }
-                
+
                 if (this.allSentences.length > 0) {
                     emptyAllState.style.display = "none";
                 } else {
                     emptyAllState.style.display = "block";
                 }
             },
-            
+
             async submitAllSentences() {
-                console.log("提交所有句子...");
                 if (this.userSentences.length === 0) {
-                    console.log("没有可提交的句子");
                     UIManager.showNotification("没有可提交的句子", "warning");
                     return;
                 }
-                
+
                 if (!SubmissionLimitManager.canSubmitMore(this.userSentences.length)) {
-                    console.log(`提交受限，今日常规提交剩余: ${Math.max(0, 5 - SubmissionLimitManager.getSubmissionCount())}，额外提交剩余: ${SubmissionLimitManager.getBonusCount()}`);
                     UIManager.showNotification(`提交次数不足，无法提交全部句子`, "warning");
                     return;
                 }
-                
+
+                // 检查用户名是否设置
+                const username = CookieUtil.getUserName();
+                if (!username || username.trim() === "") {
+                    UIManager.showNotification("请先设置您的用户名再提交句子", "warning");
+                    UIManager.showUsernameModal();
+                    return;
+                }
+
                 try {
                     UIManager.showLoading(true);
                     UIManager.showNotification("正在提交，请稍候...", "info");
-                    
+
                     // 强化多人同时上传的处理：再次获取最新文件内容，确保获取最新版本
-                    console.log("获取最新文件内容以防止冲突...");
                     await this.fetchAllSentences();
-                    
+
                     // 将当前所有句子展开为带重复的行
                     let existingLines = [];
                     this.allSentences.forEach(s => {
@@ -1577,37 +2526,51 @@
                             existingLines.push(s.text);
                         }
                     });
-                    
+
                     // 添加新句子
                     let addedCount = 0;
                     let regularSubmissions = 0;
                     let bonusSubmissions = 0;
-                    
+                    let addedSentences = [];
+                    let sentencesWithScores = [];
+
                     // 处理每个用户句子
                     for (const sentenceObj of this.userSentencesWithScores) {
                         const sentence = sentenceObj.text;
-                        
+
                         // 检查是否已存在
                         if (this.allSentences.some(s => s.text === sentence)) {
-                            console.log(`句子已存在: "${sentence.substring(0, 30)}..."`);
                             continue;
                         }
-                        
+
                         // 获取句子评分
                         const score = sentenceObj.score;
                         const isHighScore = score !== null && SentenceScorer.isHighScore(score);
-                        
+
                         // 高分句子写入3次，普通句子写入1次
                         const repeatCount = isHighScore ? 3 : 1;
                         for (let i = 0; i < repeatCount; i++) {
                             existingLines.push(sentence);
                         }
-                        
+
                         // 记录用户提交的句子
                         CookieUtil.addToUserSubmittedSentences(sentence);
-                        
+
+                        // 如果是高分句子，记录到高分句子列表
+                        if (isHighScore) {
+                            CookieUtil.addToHighScoreSentences(sentence);
+                        }
+
+                        addedSentences.push(sentence);
+                        sentencesWithScores.push({
+                            text: sentence,
+                            score: score,
+                            feedback: sentenceObj.feedback,
+                            explanation: sentenceObj.explanation || ""
+                        });
+
                         addedCount++;
-                        
+
                         // 计算使用的常规和额外提交次数
                         if (regularSubmissions < 5) {
                             regularSubmissions++;
@@ -1615,43 +2578,46 @@
                             bonusSubmissions++;
                         }
                     }
-                    
-                    console.log(`添加了 ${addedCount} 个新句子`);
-                    
+
                     // 检查是否有任何变化
                     if (addedCount === 0) {
-                        console.log("没有新句子需要添加");
                         UIManager.showNotification("所有句子已存在，无需提交", "info");
                         UIManager.showLoading(false);
                         return;
                     }
-                    
+
                     // 合并为文本
                     const newContent = existingLines.join('\n');
-                    console.log(`准备上传的内容共 ${existingLines.length} 行，${newContent.length} 字节`);
-                    
+
                     // 上传文件
                     const success = await this.uploadSentences(newContent);
-                    
+
                     if (success) {
-                        console.log("句子上传成功");
-                        
+                        // 记录提交操作到日志
+                        await this.logSentenceAction('submit', addedSentences, sentencesWithScores);
+
+                        // 更新统计数据
+                        StatsManager.incrementSubmitted(addedCount);
+
                         // 更新常规提交计数
                         const regularToUse = Math.min(regularSubmissions, 5 - SubmissionLimitManager.getSubmissionCount());
                         SubmissionLimitManager.incrementSubmissionCount(regularToUse);
-                        
+
                         // 使用额外提交次数
                         const bonusToUse = Math.max(0, regularSubmissions - regularToUse) + bonusSubmissions;
                         for (let i = 0; i < bonusToUse; i++) {
                             SubmissionLimitManager.useBonusSubmission();
                         }
-                        
+
                         // 清空用户句子
                         this.clearUserSentences();
-                        
+
                         // 重新获取所有句子以确认更新成功
                         await this.fetchAllSentences();
-                        
+
+                        // 更新分享选择器
+                        StatsManager.updateShareSelect();
+
                         UIManager.showNotification(`成功提交 ${addedCount} 个句子，正在刷新...`, "success");
                         setTimeout(() => {
                             // 使用强制刷新，完全绕过缓存
@@ -1661,132 +2627,334 @@
                         UIManager.showNotification("提交失败，服务器返回错误", "error");
                     }
                 } catch (error) {
-                    console.error("提交句子失败:", error);
                     UIManager.showNotification("提交失败，请稍后再试", "error");
                 } finally {
                     UIManager.showLoading(false);
                 }
             },
-            
+
             async uploadSentences(content) {
-                console.log("开始上传句子文件...");
-                console.log(`上传路径: ${FILE_PATH}`);
-                
                 // 设置请求头 - 不使用URL编码，防止路径中的/被转义
                 const headers = new Headers({
                     'Content-Type': 'text/plain; charset=UTF-8',
-                    'File-Path': FILE_PATH, // 去除encodeURIComponent，保持原始路径
+                    'File-Path': FILE_PATH, // 保持原始路径
                     'Cache-Control': 'no-cache',
                     'Pragma': 'no-cache'
                 });
-                
+
                 // 如果有授权令牌，可以添加 Authorization 头
                 const authToken = localStorage.getItem('auth_token');
                 if (authToken) {
                     headers.append('Authorization', authToken);
-                    console.log("使用授权令牌进行上传");
-                } else {
-                    console.log("无授权令牌，以匿名方式上传");
                 }
-                
+
                 try {
-                    console.log("发送直接PUT上传请求...");
-                    console.log("上传内容长度:", content.length, "字节");
-                    
                     // 直接发送文本内容作为请求体
                     const response = await fetch('/api/fs/put', {
                         method: 'PUT',
                         headers: headers,
                         body: content // 直接发送文本内容
                     });
-                    
+
                     if (!response.ok) {
-                        const errorText = await response.text();
-                        console.error(`上传失败，状态码: ${response.status}，响应: ${errorText}`);
                         throw new Error(`上传失败，状态码: ${response.status}`);
                     }
-                    
+
                     const result = await response.json();
-                    console.log("上传响应:", result);
                     return result.code === 200;
                 } catch (error) {
-                    console.error("上传错误:", error);
                     throw error;
                 }
+            },
+
+            // 记录句子提交和删除操作
+            async logSentenceAction(action, sentences, sentenceDetails = []) {
+                try {
+                    // 获取现有日志
+                    let logContent = "";
+                    try {
+                        const response = await fetch(LOG_DOWNLOAD_URL + '?cache=' + Date.now(), {
+                            method: 'GET',
+                            headers: {
+                                'Cache-Control': 'no-cache',
+                                'Pragma': 'no-cache'
+                            }
+                        });
+
+                        if (response.ok) {
+                            logContent = await response.text();
+                        }
+                    } catch (error) {
+                        console.error("获取日志文件失败，将创建新日志");
+                    }
+
+                    // 准备新日志内容
+                    const now = new Date();
+                    const dateStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
+                    const username = CookieUtil.getUserName() || "未设置用户名";
+
+                    let newLogEntries = [];
+
+                    if (action === 'submit') {
+                        // 记录每个提交的句子
+                        sentenceDetails.forEach((sentenceObj, index) => {
+                            const sentence = sentenceObj.text;
+                            const score = sentenceObj.score !== null ? sentenceObj.score.toFixed(1) : "无评分";
+                            const feedback = sentenceObj.feedback || "无评价";
+
+                            // 格式化日志条目
+                            const logEntry = `[${dateStr}] 用户: ${username} | 操作: 提交 | 句子: "${sentence}" | 评分: ${score} | 评价: ${feedback}`;
+                            newLogEntries.push(logEntry);
+                        });
+                    } else if (action === 'delete') {
+                        // 记录删除操作
+                        sentences.forEach(sentence => {
+                            const logEntry = `[${dateStr}] 用户: ${username} | 操作: 删除 | 句子: "${sentence}"`;
+                            newLogEntries.push(logEntry);
+                        });
+                    }
+
+                    // 合并新旧日志内容
+                    if (logContent && logContent.trim()) {
+                        logContent += "\n" + newLogEntries.join("\n");
+                    } else {
+                        logContent = newLogEntries.join("\n");
+                    }
+
+                    // 上传新日志
+                    const headers = new Headers({
+                        'Content-Type': 'text/plain; charset=UTF-8',
+                        'File-Path': LOG_FILE_PATH,
+                        'Cache-Control': 'no-cache',
+                        'Pragma': 'no-cache'
+                    });
+
+                    const authToken = localStorage.getItem('auth_token');
+                    if (authToken) {
+                        headers.append('Authorization', authToken);
+                    }
+
+                    const response = await fetch('/api/fs/put', {
+                        method: 'PUT',
+                        headers: headers,
+                        body: logContent
+                    });
+
+                    if (!response.ok) {
+                        console.error("日志记录失败", response.status);
+                        return false;
+                    }
+
+                    const result = await response.json();
+                    return result.code === 200;
+
+                } catch (error) {
+                    console.error("记录操作日志失败", error);
+                    return false;
+                }
+            },
+
+            // 设置当前句子的解释
+            setExplanation(explanation) {
+                this.explanation = explanation;
+            },
+
+            // 获取当前句子的解释
+            getExplanation() {
+                return this.explanation;
+            },
+
+            // 获取用户句子的评分信息
+            getSentenceScoreInfo(sentence) {
+                // 从用户句子列表中查找
+                const sentenceObj = this.userSentencesWithScores.find(s => s.text === sentence);
+                if (sentenceObj && sentenceObj.score !== null) {
+                    return {
+                        score: sentenceObj.score,
+                        feedback: sentenceObj.feedback || "",
+                        isHighScore: SentenceScorer.isHighScore(sentenceObj.score)
+                    };
+                }
+
+                // 从已提交句子中查找
+                const allSentenceObj = this.allSentences.find(s => s.text === sentence);
+                if (allSentenceObj) {
+                    return {
+                        isHighScore: allSentenceObj.isHighScore,
+                        score: allSentenceObj.isHighScore ? 7 : null,
+                        feedback: ""
+                    };
+                }
+
+                // 从评分缓存中查找
+                const scoreObj = SentenceScorer.getSentenceScore(sentence);
+                if (scoreObj) {
+                    return {
+                        score: scoreObj.score,
+                        feedback: scoreObj.feedback || "",
+                        isHighScore: SentenceScorer.isHighScore(scoreObj.score)
+                    };
+                }
+
+                return null;
             }
         };
 
         // UI管理
         const UIManager = {
             currentSentence: "",
-            
+            userSentencesWithScores: [], // 存储用户的句子和分数，用于分享功能
+
             init() {
                 this.initEventListeners();
                 this.initAnimations();
                 this.setupCharCounter();
+                this.setupTabs();
+                this.setupShareCard();
+                this.setupUsernameDisplay();
+                this.setupMultiShareList();
             },
-            
+
+            setupUsernameDisplay() {
+                const username = CookieUtil.getUserName();
+                if (!username || username.trim() === "") {
+                    // 首次使用，显示用户名设置对话框
+                    this.showUsernameModal();
+                } else {
+                    // 更新用户名显示
+                    document.getElementById("username-value").textContent = username;
+                    document.getElementById("share-username").textContent = username;
+                }
+            },
+
+            showUsernameModal() {
+                const modal = document.getElementById("username-modal");
+                const input = document.getElementById("username-input");
+                const currentUsername = CookieUtil.getUserName();
+
+                // 如果已有用户名，填入当前值
+                if (currentUsername) {
+                    input.value = currentUsername;
+                }
+
+                // 显示模态框
+                modal.classList.add("visible");
+
+                // 获取输入框焦点
+                setTimeout(() => {
+                    input.focus();
+                }, 300);
+            },
+
+            hideUsernameModal() {
+                const modal = document.getElementById("username-modal");
+                modal.classList.remove("visible");
+            },
+
+            saveUsername() {
+                const input = document.getElementById("username-input");
+                const username = input.value.trim();
+
+                if (!username) {
+                    this.showNotification("请输入有效的用户名", "warning");
+                    return;
+                }
+
+                // 保存用户名
+                CookieUtil.setUserName(username);
+
+                // 更新显示
+                document.getElementById("username-value").textContent = username;
+                document.getElementById("share-username").textContent = username;
+
+                // 隐藏模态框
+                this.hideUsernameModal();
+
+                this.showNotification("用户名已保存", "success");
+            },
+
+            setupMultiShareList() {
+                // 这在StatsManager.updateMultiShareList中实现
+            },
+
             initEventListeners() {
+                // 向AI解释按钮
+                document.getElementById("explain-btn").addEventListener("click", () => {
+                    this.toggleExplanationContainer();
+                });
+
                 // AI评分按钮
                 document.getElementById("rate-btn").addEventListener("click", async () => {
                     const input = document.getElementById("sentence-input");
                     const sentence = input.value.trim();
-                    
+
                     if (!sentence) {
                         this.showNotification("请先输入句子再获取评分", "warning");
                         return;
                     }
-                    
+
                     if (sentence.length > 20) {
                         this.showNotification("句子不能超过20个字符", "warning");
                         return;
                     }
-                    
+
+                    // 获取解释内容
+                    const explanation = document.getElementById("explanation-textarea").value.trim();
+                    SentenceManager.setExplanation(explanation);
+
                     this.currentSentence = sentence;
-                    await this.getAndDisplayScore(sentence);
+                    await this.getAndDisplayScore(sentence, explanation);
                 });
-                
+
                 // 添加句子按钮
                 document.getElementById("add-btn").addEventListener("click", async () => {
                     const input = document.getElementById("sentence-input");
                     const sentence = input.value.trim();
-                    
+                    const explanation = document.getElementById("explanation-textarea").value.trim();
+
                     if (sentence !== this.currentSentence) {
                         // 如果句子发生变化，先获取评分
                         this.showNotification("句子已修改，正在重新评分...", "warning");
-                        await this.getAndDisplayScore(sentence);
+                        await this.getAndDisplayScore(sentence, explanation);
                         return;
                     }
-                    
+
                     // 获取当前评分信息
-                    const scoreObj = SentenceScorer.getSentenceScore(sentence);
-                    
+                    const scoreObj = SentenceScorer.getSentenceScore(sentence, explanation);
+
                     if (!scoreObj) {
                         this.showNotification("请先获取句子评分", "warning");
                         return;
                     }
-                    
-                    if (await SentenceManager.addUserSentence(sentence, scoreObj)) {
+
+                    // 尝试添加句子
+                    if (await SentenceManager.addUserSentence(sentence, scoreObj, explanation)) {
                         input.value = "";
+                        document.getElementById("explanation-textarea").value = "";
                         this.updateCharCounter(input);
                         this.hideScoreContainer();
+                        this.hideExplanationContainer();
                         this.currentSentence = "";
+                        SentenceManager.setExplanation("");
                     }
                 });
-                
+
                 // 清空按钮
                 document.getElementById("clear-btn").addEventListener("click", () => {
                     document.getElementById("sentence-input").value = "";
+                    document.getElementById("explanation-textarea").value = "";
                     this.updateCharCounter(document.getElementById("sentence-input"));
                     this.hideScoreContainer();
+                    this.hideExplanationContainer();
                     this.currentSentence = "";
+                    SentenceManager.setExplanation("");
                 });
-                
+
                 // 提交所有句子按钮
                 document.getElementById("submit-all-btn").addEventListener("click", () => {
                     SentenceManager.submitAllSentences();
                 });
-                
+
                 // 回车键添加句子
                 document.getElementById("sentence-input").addEventListener("keydown", (e) => {
                     if (e.key === "Enter" && !e.shiftKey) {
@@ -1794,7 +2962,7 @@
                         document.getElementById("rate-btn").click();
                     }
                 });
-                
+
                 // 句子输入改变时，隐藏评分结果
                 document.getElementById("sentence-input").addEventListener("input", () => {
                     this.updateCharCounter(document.getElementById("sentence-input"));
@@ -1802,51 +2970,143 @@
                         this.hideScoreContainer();
                     }
                 });
+
+                // 分享选择器改变
+                document.getElementById("share-sentence-select").addEventListener("change", (e) => {
+                    const selectedSentence = e.target.value;
+                    if (selectedSentence) {
+                        document.getElementById("share-card-text").textContent = selectedSentence;
+
+                        // 更新分数显示
+                        const scoreInfo = SentenceManager.getSentenceScoreInfo(selectedSentence);
+                        if (scoreInfo && scoreInfo.score !== null) {
+                            const scoreElement = document.getElementById("share-score");
+                            scoreElement.textContent = scoreInfo.score.toFixed(1) + "分";
+
+                            // 根据分数设置颜色
+                            if (scoreInfo.isHighScore) {
+                                scoreElement.style.color = "#FFD700";
+                            } else {
+                                scoreElement.style.color = "#006adc";
+                            }
+
+                            // 显示分数徽章
+                            document.getElementById("share-card-score").style.display = "block";
+                        } else {
+                            document.getElementById("share-card-score").style.display = "none";
+                        }
+
+                        // 生成随机装饰背景
+                        this.updateShareCardDecorations();
+                    } else {
+                        document.getElementById("share-card-text").textContent = "选择一个句子来创建分享卡片";
+                        document.getElementById("share-card-score").style.display = "none";
+                    }
+                });
+
+                // 分享按钮事件
+                document.getElementById("share-download").addEventListener("click", () => this.downloadShareImage());
+                document.getElementById("share-view").addEventListener("click", () => this.showShareViewModal());
+
+                // 多句分享按钮事件
+                document.getElementById("multi-share-download").addEventListener("click", () => this.downloadMultiShareImage());
+                document.getElementById("multi-share-view").addEventListener("click", () => this.showMultiShareViewModal());
+
+                // 模态框关闭按钮
+                document.querySelectorAll(".modal-close").forEach(btn => {
+                    btn.addEventListener("click", () => {
+                        document.querySelectorAll(".modal").forEach(modal => {
+                            modal.classList.remove("visible");
+                        });
+                    });
+                });
+
+                document.getElementById("modal-close-view-btn").addEventListener("click", () => {
+                    document.getElementById("share-view-modal").classList.remove("visible");
+                });
+
+                // 用户名管理
+                document.getElementById("username-edit").addEventListener("click", () => {
+                    this.showUsernameModal();
+                });
+
+                document.getElementById("save-username-btn").addEventListener("click", () => {
+                    this.saveUsername();
+                });
+
+                document.getElementById("cancel-username-btn").addEventListener("click", () => {
+                    this.hideUsernameModal();
+                });
+
+                // 用户名输入框回车提交
+                document.getElementById("username-input").addEventListener("keydown", (e) => {
+                    if (e.key === "Enter") {
+                        e.preventDefault();
+                        this.saveUsername();
+                    }
+                });
             },
-            
-            async getAndDisplayScore(sentence) {
+
+            toggleExplanationContainer() {
+                const container = document.getElementById("explanation-container");
+                if (container.classList.contains("visible")) {
+                    container.classList.remove("visible");
+                } else {
+                    container.classList.add("visible");
+                    // 获取焦点
+                    setTimeout(() => {
+                        document.getElementById("explanation-textarea").focus();
+                    }, 300);
+                }
+            },
+
+            hideExplanationContainer() {
+                const container = document.getElementById("explanation-container");
+                container.classList.remove("visible");
+            },
+
+            async getAndDisplayScore(sentence, explanation = "") {
                 if (!sentence) return;
-                
+
                 try {
                     this.showLoading(true);
                     this.showScoreLoading();
-                    
-                    const scoreResult = await SentenceScorer.scoreSentence(sentence);
-                    
+
+                    const scoreResult = await SentenceScorer.scoreSentence(sentence, explanation);
+
                     this.displayScore(scoreResult);
                     this.currentSentence = sentence;
                 } catch (error) {
-                    console.error("评分失败:", error);
-                    this.showNotification("获取评分失败，请稍后再试", "error");
+                    this.showNotification("获取评分失败: " + error.message, "error");
                     this.hideScoreContainer();
                 } finally {
                     this.showLoading(false);
                 }
             },
-            
+
             showScoreLoading() {
                 const container = document.getElementById("ai-score-container");
                 container.classList.add("visible");
-                
+
                 document.getElementById("ai-score-value").textContent = "评分中...";
                 document.getElementById("score-meter-fill").style.width = "0%";
                 document.getElementById("ai-score-bonus").classList.remove("visible");
             },
-            
+
             displayScore(scoreResult) {
                 const container = document.getElementById("ai-score-container");
                 container.classList.add("visible");
-                
+
                 const scoreValue = document.getElementById("ai-score-value");
                 const scoreMeter = document.getElementById("score-meter-fill");
                 const scoreBonus = document.getElementById("ai-score-bonus");
-                
+
                 // 设置分数文本
                 scoreValue.textContent = `${scoreResult.score.toFixed(1)} 分 - ${scoreResult.feedback}`;
-                
+
                 // 设置分数条
                 scoreMeter.style.width = `${(scoreResult.score / 10) * 100}%`;
-                
+
                 // 根据分数显示不同样式
                 if (SentenceScorer.isHighScore(scoreResult.score)) {
                     // 高分句子
@@ -1856,7 +3116,7 @@
                     // 低分句子
                     scoreBonus.classList.remove("visible");
                     scoreValue.style.color = "#ff3b30"; // 红色提示
-                    
+
                     // 添加提示信息
                     if (scoreResult.score <= 2) {
                         this.showNotification("这句话似乎不够积极向上哦，可以试试更活泼的表达～", "warning");
@@ -1866,7 +3126,7 @@
                     scoreBonus.classList.remove("visible");
                     scoreValue.style.color = "var(--text-dark)";
                 }
-                
+
                 // 添加动画效果
                 gsap.fromTo(
                     scoreMeter,
@@ -1874,20 +3134,20 @@
                     { width: `${(scoreResult.score / 10) * 100}%`, duration: 0.8, ease: "power2.out" }
                 );
             },
-            
+
             hideScoreContainer() {
                 const container = document.getElementById("ai-score-container");
                 container.classList.remove("visible");
             },
-            
+
             initAnimations() {
                 // 页面加载动画
                 gsap.fromTo(
-                    ".fade-in", 
-                    { opacity: 0, y: 30 }, 
+                    ".fade-in",
+                    { opacity: 0, y: 30 },
                     { opacity: 1, y: 0, stagger: 0.2, duration: 0.8, ease: "power2.out" }
                 );
-                
+
                 // 背景动画
                 gsap.to(".header-background", {
                     backgroundPosition: "100% 100%",
@@ -1897,41 +3157,41 @@
                     ease: "sine.inOut"
                 });
             },
-            
+
             setupCharCounter() {
                 const input = document.getElementById("sentence-input");
                 const counter = document.getElementById("char-counter");
-                
+
                 input.addEventListener("input", () => {
                     this.updateCharCounter(input);
                 });
-                
+
                 this.updateCharCounter(input);
             },
-            
+
             updateCharCounter(input) {
                 const counter = document.getElementById("char-counter");
                 const length = input.value.length;
                 counter.textContent = `${length}/20`;
-                
+
                 if (length > 20) {
                     counter.style.color = "#ff3b30";
                 } else {
                     counter.style.color = "var(--text-light)";
                 }
             },
-            
+
             showNotification(message, type = "success") {
                 const notification = document.getElementById("notification");
                 const notificationText = document.getElementById("notification-text");
                 const icon = notification.querySelector("i");
-                
+
                 // 设置消息
                 notificationText.textContent = message;
-                
+
                 // 设置类型
                 notification.className = "notification " + type;
-                
+
                 // 设置图标
                 icon.className = "fas";
                 if (type === "success") {
@@ -1943,7 +3203,7 @@
                 } else {
                     icon.classList.add("fa-info-circle");
                 }
-                
+
                 // 显示通知
                 gsap.killTweensOf(notification);
                 gsap.to(notification, {
@@ -1960,10 +3220,10 @@
                     }
                 });
             },
-            
+
             showLoading(show) {
                 const loadingOverlay = document.getElementById("loading-overlay");
-                
+
                 if (show) {
                     gsap.to(loadingOverlay, {
                         opacity: 1,
@@ -1981,70 +3241,1505 @@
                         }
                     });
                 }
+            },
+
+            // 设置标签页功能
+            setupTabs() {
+                const tabs = document.querySelectorAll('.tab');
+
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        // 移除所有标签页的活动状态
+                        tabs.forEach(t => t.classList.remove('active'));
+
+                        // 移除所有内容的活动状态
+                        document.querySelectorAll('.tab-content').forEach(content => {
+                            content.classList.remove('active');
+                        });
+
+                        // 添加当前标签页的活动状态
+                        tab.classList.add('active');
+
+                        // 显示对应的内容
+                        const tabName = tab.getAttribute('data-tab');
+                        document.getElementById(`${tabName}-tab`).classList.add('active');
+                    });
+                });
+            },
+
+            // 设置分享卡片功能
+            setupShareCard() {
+                // 为分享卡片设置随机背景色和装饰
+                this.updateShareCardBackground();
+                this.updateShareCardDecorations();
+            },
+
+            // 更新分享卡片背景色
+            updateShareCardBackground() {
+                const card = document.getElementById('share-card');
+                if (!card) return;
+
+                // 随机选择一个渐变背景
+                const gradients = [
+                    'linear-gradient(135deg, #f5f7fa, #c3cfe2)',
+                    'linear-gradient(135deg, #e0eafc, #cfdef3)',
+                    'linear-gradient(135deg, #f3e7e9, #e3eeff)',
+                    'linear-gradient(135deg, #c9d6ff, #e2e2e2)',
+                    'linear-gradient(135deg, #f5f7fa, #b8c6db)',
+                    'linear-gradient(135deg, #d3cce3, #e9e4f0)'
+                ];
+
+                const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
+                card.style.background = randomGradient;
+            },
+
+            // 更新分享卡片装饰
+            updateShareCardDecorations() {
+                const decoration = document.getElementById('share-card-decoration');
+                if (!decoration) return;
+
+                // 创建SVG装饰
+                const svgContent = `
+                    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+                                <circle cx="3" cy="3" r="1.5" fill="rgba(0,106,220,0.2)" />
+                            </pattern>
+                            <pattern id="lines" width="60" height="60" patternUnits="userSpaceOnUse">
+                                <path d="M0 30 L60 30" stroke="rgba(87,70,175,0.1)" stroke-width="2" />
+                                <path d="M30 0 L30 60" stroke="rgba(87,70,175,0.1)" stroke-width="2" />
+                            </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#dots)" />
+                        <rect width="100%" height="100%" fill="url(#lines)" />
+                        <circle cx="80%" cy="20%" r="30" fill="rgba(255,215,0,0.1)" />
+                        <circle cx="10%" cy="70%" r="40" fill="rgba(0,106,220,0.1)" />
+                    </svg>`;
+
+                decoration.innerHTML = svgContent;
+            },
+
+            // 显示分享查看模态框
+            showShareViewModal() {
+                const sentence = document.getElementById('share-sentence-select').value;
+                if (!sentence) {
+                    this.showNotification('请先选择一个句子', 'warning');
+                    return;
+                }
+
+                const modal = document.getElementById('share-view-modal');
+                const container = document.getElementById('share-image-view-container');
+                container.innerHTML = '';
+
+                // 生成分享图片
+                this.generateShareImage(sentence, true);
+
+                // 显示模态框
+                modal.classList.add('visible');
+            },
+
+            // 显示多句分享查看模态框
+            showMultiShareViewModal() {
+                const selectedSentences = this.getSelectedMultiShareSentences();
+                if (selectedSentences.length === 0) {
+                    this.showNotification('请至少选择一个句子', 'warning');
+                    return;
+                }
+
+                const modal = document.getElementById('share-view-modal');
+                const container = document.getElementById('share-image-view-container');
+                container.innerHTML = '';
+
+                // 生成多句分享图片
+                this.generateMultiShareImage(selectedSentences, true);
+
+                // 显示模态框
+                modal.classList.add('visible');
+            },
+
+            // 获取选中的多句分享句子
+            getSelectedMultiShareSentences() {
+                const checkboxes = document.querySelectorAll('.multi-share-checkbox:checked');
+                return Array.from(checkboxes).map(cb => cb.getAttribute('data-sentence'));
+            },
+
+            // 生成分享图片
+            generateShareImage(sentence, forModal = false) {
+                const container = forModal
+                    ? document.getElementById('share-image-view-container')
+                    : document.getElementById('share-image-container');
+
+                if (!container) return;
+
+                container.innerHTML = '';
+
+                // 获取句子分数
+                const scoreInfo = SentenceManager.getSentenceScoreInfo(sentence);
+                const username = CookieUtil.getUserName() || "未设置";
+                const isHighScore = scoreInfo && scoreInfo.isHighScore;
+
+                // 创建画布元素用于生成图片
+                const canvas = document.createElement('canvas');
+                canvas.width = 800;
+                canvas.height = 500;
+                container.appendChild(canvas);
+
+                const ctx = canvas.getContext('2d');
+
+                // 绘制背景
+                const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+                gradient.addColorStop(0, '#f5f7fa');
+                gradient.addColorStop(1, '#c3cfe2');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                // 为高分句子添加金边装饰
+                if (isHighScore) {
+                    ctx.strokeStyle = '#FFD700';
+                    ctx.lineWidth = 10;
+                    ctx.strokeRect(15, 15, canvas.width - 30, canvas.height - 30);
+
+                    // 添加角落装饰元素
+                    this.drawCornerDecoration(ctx, 30, 30, '#FFD700');
+                    this.drawCornerDecoration(ctx, canvas.width - 30, 30, '#FFD700');
+                    this.drawCornerDecoration(ctx, 30, canvas.height - 30, '#FFD700');
+                    this.drawCornerDecoration(ctx, canvas.width - 30, canvas.height - 30, '#FFD700');
+                }
+
+                // 添加背景装饰元素
+                this.drawBackgroundDecoration(ctx, canvas.width, canvas.height, isHighScore);
+
+                // 设置文本样式
+                ctx.font = 'bold 36px "LXGW WenKai", sans-serif';
+                ctx.fillStyle = '#333';
+                ctx.textAlign = 'center';
+
+                // 绘制句子文本（支持自动换行）
+                this.drawWrappedText(ctx, sentence, canvas.width / 2, canvas.height / 2, 600);
+
+                // 绘制页脚
+                ctx.font = '20px "LXGW WenKai", sans-serif';
+                ctx.fillStyle = '#666';
+                ctx.fillText('我在G122班级屏幕上展示的句子', canvas.width / 2, canvas.height - 50);
+
+                // 绘制用户名
+                ctx.font = 'bold 24px "LXGW WenKai", sans-serif';
+                ctx.fillStyle = '#006adc';
+                ctx.textAlign = 'left';
+                ctx.fillText(`用户: ${username}`, 40, 40);
+
+                // 绘制Logo
+                ctx.font = 'bold 24px "LXGW WenKai", sans-serif';
+                ctx.fillStyle = '#5746af';
+                ctx.textAlign = 'right';
+                ctx.fillText('G122句子投稿', canvas.width - 40, 40);
+
+                // 如果有分数，显示分数
+                if (scoreInfo && scoreInfo.score !== null) {
+                    ctx.font = 'bold 24px "LXGW WenKai", sans-serif';
+                    ctx.fillStyle = isHighScore ? '#FFD700' : '#006adc';
+                    ctx.textAlign = 'right';
+                    ctx.fillText(`评分: ${scoreInfo.score.toFixed(1)}分`, canvas.width - 40, 80);
+                }
+
+                return canvas;
+            },
+
+            // 生成多句分享图片
+            generateMultiShareImage(sentences, forModal = false) {
+                const container = forModal
+                    ? document.getElementById('share-image-view-container')
+                    : document.getElementById('share-image-container');
+
+                if (!container) return;
+
+                container.innerHTML = '';
+
+                // 获取统计数据
+                const stats = StatsManager.getUserStatsSummary();
+                const username = CookieUtil.getUserName() || "未设置";
+
+                // 创建画布元素用于生成图片
+                const canvas = document.createElement('canvas');
+                canvas.width = 800;
+                canvas.height = 900; // 更高一些，以容纳多个句子
+                container.appendChild(canvas);
+
+                const ctx = canvas.getContext('2d');
+
+                // 绘制背景
+                const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+                gradient.addColorStop(0, '#f5f7fa');
+                gradient.addColorStop(1, '#b8c6db');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                // 添加装饰图案
+                this.drawBackgroundDecoration(ctx, canvas.width, canvas.height, true);
+
+                // 绘制标题
+                ctx.font = 'bold 40px "LXGW WenKai", sans-serif';
+                ctx.fillStyle = '#333';
+                ctx.textAlign = 'center';
+                ctx.fillText('我的G122句子投稿', canvas.width / 2, 60);
+
+                // 绘制用户信息
+                ctx.font = 'bold 30px "LXGW WenKai", sans-serif';
+                ctx.fillStyle = '#006adc';
+                ctx.textAlign = 'center';
+                ctx.fillText(`用户: ${username}`, canvas.width / 2, 110);
+
+                // 绘制统计数据
+                ctx.font = '24px "LXGW WenKai", sans-serif';
+                ctx.fillStyle = '#5746af';
+                ctx.textAlign = 'center';
+
+                const statsY = 160;
+                const statsSpacing = 40;
+
+                ctx.fillText(`总提交数: ${stats.totalSubmitted}`, canvas.width / 2, statsY);
+                ctx.fillText(`高分句子: ${stats.highScoreCount}`, canvas.width / 2, statsY + statsSpacing);
+                ctx.fillText(`平均分数: ${stats.avgScore}`, canvas.width / 2, statsY + statsSpacing * 2);
+
+                // 绘制分隔线
+                ctx.beginPath();
+                ctx.moveTo(100, 270);
+                ctx.lineTo(canvas.width - 100, 270);
+                ctx.strokeStyle = '#ddd';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                // 绘制句子标题
+                ctx.font = 'bold 28px "LXGW WenKai", sans-serif';
+                ctx.fillStyle = '#333';
+                ctx.textAlign = 'center';
+                ctx.fillText('我的精选句子', canvas.width / 2, 320);
+
+                // 绘制句子列表
+                let startY = 380;
+                const lineHeight = 150;
+
+                sentences.forEach((sentence, index) => {
+                    if (index >= 5) return; // 最多显示5个句子
+
+                    const scoreInfo = SentenceManager.getSentenceScoreInfo(sentence);
+                    const isHighScore = scoreInfo && scoreInfo.isHighScore;
+
+                    // 绘制句子背景
+                    ctx.fillStyle = isHighScore ? 'rgba(255, 215, 0, 0.1)' : 'rgba(255, 255, 255, 0.6)';
+                    ctx.fillRect(50, startY - 40, canvas.width - 100, 100);
+
+                    // 添加句子左边框
+                    ctx.fillStyle = isHighScore ? '#FFD700' : '#006adc';
+                    ctx.fillRect(50, startY - 40, 10, 100);
+
+                    // 绘制句子内容
+                    ctx.font = 'bold 28px "LXGW WenKai", sans-serif';
+                    ctx.fillStyle = '#333';
+                    ctx.textAlign = 'left';
+
+                    // 处理长句子
+                    if (sentence.length > 25) {
+                        const firstPart = sentence.substring(0, 25);
+                        const secondPart = sentence.substring(25);
+                        ctx.fillText(firstPart, 80, startY);
+                        ctx.fillText(secondPart, 80, startY + 40);
+                    } else {
+                        ctx.fillText(sentence, 80, startY);
+                    }
+
+                    // 如果有分数，显示分数
+                    if (scoreInfo && scoreInfo.score !== null) {
+                        ctx.font = 'bold 24px "LXGW WenKai", sans-serif';
+                        ctx.fillStyle = isHighScore ? '#FFD700' : '#006adc';
+                        ctx.textAlign = 'right';
+                        ctx.fillText(`${scoreInfo.score.toFixed(1)}分`, canvas.width - 80, startY + 25);
+                    }
+
+                    startY += lineHeight;
+                });
+
+                // 绘制页脚
+                ctx.font = '20px "LXGW WenKai", sans-serif';
+                ctx.fillStyle = '#666';
+                ctx.textAlign = 'center';
+                ctx.fillText('G122班级屏幕句子投稿 - 让美好的文字传递下去', canvas.width / 2, canvas.height - 40);
+
+                return canvas;
+            },
+
+            // 绘制角落装饰
+            drawCornerDecoration(ctx, x, y, color) {
+                ctx.save();
+                ctx.fillStyle = color;
+                ctx.beginPath();
+                ctx.arc(x, y, 15, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+            },
+
+            // 绘制背景装饰
+            drawBackgroundDecoration(ctx, width, height, isHighScore) {
+                ctx.save();
+
+                // 添加轻微的水波纹背景
+                for (let i = 0; i < width; i += 50) {
+                    ctx.beginPath();
+                    ctx.strokeStyle = isHighScore ? 'rgba(255, 215, 0, 0.1)' : 'rgba(0, 106, 220, 0.05)';
+                    ctx.lineWidth = 1;
+
+                    // 创建波浪线
+                    ctx.moveTo(i, 0);
+                    for (let j = 0; j < height; j += 20) {
+                        ctx.lineTo(i + 15 * Math.sin(j / 40), j);
+                    }
+                    ctx.stroke();
+                }
+
+                // 添加一些装饰点缀
+                for (let i = 0; i < 20; i++) {
+                    const x = Math.random() * width;
+                    const y = Math.random() * height;
+                    const size = Math.random() * 5 + 2;
+
+                    ctx.beginPath();
+                    ctx.fillStyle = isHighScore
+                        ? `rgba(255, 215, 0, ${Math.random() * 0.3})`
+                        : `rgba(0, 106, 220, ${Math.random() * 0.2})`;
+                    ctx.arc(x, y, size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+
+                ctx.restore();
+            },
+
+            // 文本自动换行功能
+            drawWrappedText(ctx, text, x, y, maxWidth) {
+                // 中文每个字符约36px
+                const charWidth = 36;
+                const lineHeight = 46;
+
+                // 计算每行最多字符数
+                const charsPerLine = Math.floor(maxWidth / charWidth);
+
+                // 分割文本
+                let lines = [];
+                for (let i = 0; i < text.length; i += charsPerLine) {
+                    lines.push(text.substring(i, i + charsPerLine));
+                }
+
+                // 计算总高度，使文本垂直居中
+                const totalHeight = lines.length * lineHeight;
+                const startY = y - totalHeight / 2;
+
+                // 绘制每一行
+                lines.forEach((line, index) => {
+                    ctx.fillText(line, x, startY + index * lineHeight);
+                });
+            },
+
+            // 下载分享图片
+            downloadShareImage() {
+                const sentence = document.getElementById('share-sentence-select').value;
+                if (!sentence) {
+                    this.showNotification('请先选择一个句子', 'warning');
+                    return;
+                }
+
+                // 生成图片（确保canvas已创建）
+                const canvas = this.generateShareImage(sentence);
+                if (!canvas) {
+                    this.showNotification('生成图片失败', 'error');
+                    return;
+                }
+
+                // 创建下载链接
+                const link = document.createElement('a');
+                link.download = 'G122句子分享.png';
+
+                // 转换canvas为图片数据
+                canvas.toBlob(blob => {
+                    const url = URL.createObjectURL(blob);
+                    link.href = url;
+
+                    // 模拟点击下载
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+
+                    // 释放URL对象
+                    setTimeout(() => URL.revokeObjectURL(url), 100);
+
+                    this.showNotification('图片已成功下载', 'success');
+                });
+            },
+
+            // 下载多句分享图片
+            downloadMultiShareImage() {
+                const selectedSentences = this.getSelectedMultiShareSentences();
+                if (selectedSentences.length === 0) {
+                    this.showNotification('请至少选择一个句子', 'warning');
+                    return;
+                }
+
+                // 生成图片（确保canvas已创建）
+                const canvas = this.generateMultiShareImage(selectedSentences);
+                if (!canvas) {
+                    this.showNotification('生成图片失败', 'error');
+                    return;
+                }
+
+                // 创建下载链接
+                const link = document.createElement('a');
+                link.download = 'G122句子集合分享.png';
+
+                // 转换canvas为图片数据
+                canvas.toBlob(blob => {
+                    const url = URL.createObjectURL(blob);
+                    link.href = url;
+
+                    // 模拟点击下载
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+
+                    // 释放URL对象
+                    setTimeout(() => URL.revokeObjectURL(url), 100);
+
+                    this.showNotification('图片已成功下载', 'success');
+                });
             }
         };
 
         // 调试信息
         const DebugLogger = {
             init() {
-                console.log("%c句子投稿网页 - 由YX制作，官网iamyx.co", "color: #006adc; font-size: 16px; font-weight: bold;");
-                console.log("%c初始化调试日志...", "color: #5746af;");
-                
-                // 版本信息
-                console.log(`应用版本: 2.0.0 (AI评分功能版)`);
-                console.log(`用户代理: ${navigator.userAgent}`);
-                console.log(`窗口尺寸: ${window.innerWidth}x${window.innerHeight}`);
-                console.log(`BASE_URL: ${BASE_URL}`);
-                console.log(`FILE_PATH: ${FILE_PATH}`);
-                
-                // 监听错误
-                window.addEventListener('error', (event) => {
-                    console.error('全局错误:', event.message, 'at', event.filename, ':', event.lineno, ':', event.colno);
-                });
-                
-                // 监听未处理的Promise拒绝
-                window.addEventListener('unhandledrejection', (event) => {
-                    console.error('未处理的Promise拒绝:', event.reason);
-                });
-                
-                console.log("%c调试日志初始化完成", "color: #5746af;");
+                console.log("%c句子投稿网页 - 由YX制作，官网a.com", "color: #006adc; font-size: 16px; font-weight: bold;");
             }
         };
-        
+
         // 清除缓存的函数
         function clearBrowserCacheForURL(url) {
             // 尝试使用Cache API清除缓存（如果浏览器支持）
             if ('caches' in window) {
                 caches.open('sentence-cache').then(cache => {
-                    cache.delete(url).then(status => {
-                        console.log(`缓存清除状态: ${status ? '成功' : '未找到或失败'}`);
-                    });
+                    cache.delete(url);
                 });
             }
         }
-        
+
         // 初始化应用
         document.addEventListener("DOMContentLoaded", () => {
             DebugLogger.init();
-            console.log("DOM加载完成，开始初始化应用...");
-            
+
             // 检查页面是否是通过刷新参数加载的
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.has('refresh')) {
-                console.log("检测到刷新参数，尝试清除文件缓存");
                 clearBrowserCacheForURL(DOWNLOAD_URL);
-                
+                clearBrowserCacheForURL(LOG_DOWNLOAD_URL);
+
                 // 如果URL中有刷新参数，清理URL（可选）
                 const cleanUrl = window.location.href.split('?')[0];
                 window.history.replaceState({}, document.title, cleanUrl);
             }
-            
+
+            // 检查是否需要每日重置额外提交次数
+            SubmissionLimitManager.checkDailyReset();
+
             SentenceScorer.init();
             UIManager.init();
             SentenceManager.init();
+            StatsManager.init();
             SubmissionLimitManager.updateUI();
-            console.log("应用初始化完成");
         });
     </script>
+    <script>
+        // Enhanced Share Image Generation and Download System
+        const ShareImageGenerator = {
+            // Canvas dimensions for 4K quality
+            singleImageDimensions: { width: 2000, height: 1200 },
+            multiImageDimensions: { width: 2000, height: 2400 },
+
+            // Font settings
+            fonts: {
+                title: "bold 80px 'LXGW WenKai', sans-serif",
+                content: "bold 60px 'LXGW WenKai', sans-serif",
+                subtitle: "36px 'LXGW WenKai', sans-serif",
+                score: "bold 50px 'LXGW WenKai', sans-serif",
+                small: "30px 'LXGW WenKai', sans-serif",
+            },
+
+            // Color schemes
+            colors: {
+                primary: '#006adc',
+                secondary: '#5746af',
+                gold: '#FFD700',
+                text: '#333333',
+                light: '#666666',
+                lightBlue: 'rgba(0, 106, 220, 0.1)',
+                lightGold: 'rgba(255, 215, 0, 0.1)',
+                white: '#ffffff'
+            },
+
+            // Initialize and preload fonts
+            init() {
+                // Create a hidden font preloader to ensure fonts are loaded before drawing
+                const preloader = document.createElement('div');
+                preloader.style.fontFamily = "'LXGW WenKai', sans-serif";
+                preloader.style.position = 'absolute';
+                preloader.style.left = '-9999px';
+                preloader.textContent = "Font preloader";
+                document.body.appendChild(preloader);
+
+                // Create helper canvas for measuring text
+                this.measureCanvas = document.createElement('canvas');
+                this.measureCtx = this.measureCanvas.getContext('2d');
+            },
+
+            /**
+             * Generate single sentence share image
+             * @param {string} sentence - The sentence to share
+             * @param {boolean} forModal - Whether rendering for modal view
+             * @returns {HTMLCanvasElement} - The generated canvas
+             */
+            generateShareImage(sentence, forModal = false) {
+                // Create canvas with high resolution
+                const canvas = document.createElement('canvas');
+                const { width, height } = this.singleImageDimensions;
+                canvas.width = width;
+                canvas.height = height;
+
+                // If for modal display, set CSS size for better viewing
+                if (forModal) {
+                    canvas.style.width = '100%';
+                    canvas.style.maxWidth = '800px';
+                    canvas.style.height = 'auto';
+                    canvas.style.borderRadius = '12px';
+                    canvas.style.boxShadow = '0 8px 30px rgba(0, 0, 0, 0.12)';
+                }
+
+                const ctx = canvas.getContext('2d');
+                // Enable anti-aliasing for text
+                ctx.imageSmoothingEnabled = true;
+                ctx.imageSmoothingQuality = 'high';
+
+                // Get user info and score
+                const username = CookieUtil.getUserName() || "未设置";
+                const scoreInfo = SentenceManager.getSentenceScoreInfo(sentence);
+                const isHighScore = scoreInfo && scoreInfo.isHighScore;
+
+                // Draw beautiful background
+                this.drawEnhancedBackground(ctx, width, height, isHighScore);
+
+                // Add decorative card effect
+                this.drawCardEffect(ctx, width, height, isHighScore);
+
+                // Add quotation marks and sentence
+                this.drawQuotedSentence(ctx, sentence, width, height);
+
+                // Add user information
+                this.drawUserInfo(ctx, username, width, height);
+
+                // Add score if available
+                if (scoreInfo && scoreInfo.score !== null) {
+                    this.drawScoreBadge(ctx, scoreInfo.score, isHighScore, width);
+                }
+
+                // Add footer with logo
+                this.drawFooter(ctx, width, height);
+
+                // Add decorative elements
+                this.addDecorativeElements(ctx, width, height, isHighScore);
+
+                // Add subtle texture overlay
+                this.addTextureOverlay(ctx, width, height);
+
+                // Add container element
+                const container = forModal
+                    ? document.getElementById('share-image-view-container')
+                    : document.getElementById('share-image-container');
+
+                if (container) {
+                    container.innerHTML = '';
+                    container.appendChild(canvas);
+                }
+
+                return canvas;
+            },
+
+            /**
+             * Generate multi-sentence share image
+             * @param {string[]} sentences - Array of sentences to share
+             * @param {boolean} forModal - Whether rendering for modal view
+             * @returns {HTMLCanvasElement} - The generated canvas
+             */
+            generateMultiShareImage(sentences, forModal = false) {
+                // Create canvas with high resolution
+                const canvas = document.createElement('canvas');
+                const { width, height } = this.multiImageDimensions;
+                canvas.width = width;
+                canvas.height = height;
+
+                // If for modal display, set CSS size for better viewing
+                if (forModal) {
+                    canvas.style.width = '100%';
+                    canvas.style.maxWidth = '800px';
+                    canvas.style.height = 'auto';
+                    canvas.style.borderRadius = '12px';
+                    canvas.style.boxShadow = '0 8px 30px rgba(0, 0, 0, 0.12)';
+                }
+
+                const ctx = canvas.getContext('2d');
+                // Enable anti-aliasing for text
+                ctx.imageSmoothingEnabled = true;
+                ctx.imageSmoothingQuality = 'high';
+
+                // Get user info and stats
+                const username = CookieUtil.getUserName() || "未设置";
+                const stats = StatsManager.getUserStatsSummary();
+
+                // Draw beautiful gradient background
+                this.drawEnhancedBackground(ctx, width, height, true);
+
+                // Add decorative card effect
+                this.drawCardEffect(ctx, width, height, true);
+
+                // Add header section
+                this.drawMultiShareHeader(ctx, username, stats, width, height);
+
+                // Add sentences section
+                this.drawMultiShareSentences(ctx, sentences, width, height);
+
+                // Add footer
+                this.drawFooter(ctx, width, height);
+
+                // Add decorative elements
+                this.addDecorativeElements(ctx, width, height, true);
+
+                // Add subtle texture overlay
+                this.addTextureOverlay(ctx, width, height);
+
+                // Add container element
+                const container = forModal
+                    ? document.getElementById('share-image-view-container')
+                    : document.getElementById('share-image-container');
+
+                if (container) {
+                    container.innerHTML = '';
+                    container.appendChild(canvas);
+                }
+
+                return canvas;
+            },
+
+            /**
+             * Draw an enhanced background with gradient and patterns
+             */
+            drawEnhancedBackground(ctx, width, height, isHighScore) {
+                // Create gradient background
+                const gradient = ctx.createLinearGradient(0, 0, width, height / 3);
+                if (isHighScore) {
+                    gradient.addColorStop(0, '#f7f9fc');
+                    gradient.addColorStop(1, '#f0f5ff');
+                } else {
+                    gradient.addColorStop(0, '#f7f9fc');
+                    gradient.addColorStop(1, '#f0f7ff');
+                }
+
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, width, height);
+
+                // Add subtle pattern
+                ctx.globalAlpha = 0.05;
+                for (let i = 0; i < width; i += 60) {
+                    for (let j = 0; j < height; j += 60) {
+                        const size = 2;
+                        ctx.fillStyle = isHighScore ? this.colors.gold : this.colors.primary;
+                        ctx.beginPath();
+                        ctx.arc(i, j, size, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                }
+                ctx.globalAlpha = 1;
+            },
+
+            /**
+             * Draw a card-like container effect
+             */
+            drawCardEffect(ctx, width, height, isHighScore) {
+                // Card padding
+                const padding = width * 0.05;
+
+                // Card dimensions
+                const cardX = padding;
+                const cardY = padding;
+                const cardWidth = width - (padding * 2);
+                const cardHeight = height - (padding * 2);
+
+                // Draw card shadow
+                ctx.shadowColor = 'rgba(0, 0, 0, 0.2)';
+                ctx.shadowBlur = 30;
+                ctx.shadowOffsetX = 0;
+                ctx.shadowOffsetY = 10;
+
+                // Draw card background
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+                ctx.beginPath();
+                ctx.roundRect(cardX, cardY, cardWidth, cardHeight, 20);
+                ctx.fill();
+
+                // Reset shadow
+                ctx.shadowColor = 'transparent';
+                ctx.shadowBlur = 0;
+                ctx.shadowOffsetX = 0;
+                ctx.shadowOffsetY = 0;
+
+                // Draw border
+                ctx.strokeStyle = isHighScore ? this.colors.gold : this.colors.primary;
+                ctx.lineWidth = isHighScore ? 6 : 4;
+                ctx.beginPath();
+                ctx.roundRect(cardX, cardY, cardWidth, cardHeight, 20);
+                ctx.stroke();
+
+                // Add inner highlight
+                ctx.strokeStyle = isHighScore ? 'rgba(255, 215, 0, 0.3)' : 'rgba(0, 106, 220, 0.2)';
+                ctx.lineWidth = 12;
+                ctx.beginPath();
+                ctx.roundRect(cardX + 10, cardY + 10, cardWidth - 20, cardHeight - 20, 10);
+                ctx.stroke();
+            },
+
+            /**
+             * Draw sentence with decorative quotation marks
+             */
+            drawQuotedSentence(ctx, sentence, width, height) {
+                const centerX = width / 2;
+                const centerY = height / 2;
+
+                // Draw large quotation marks
+                ctx.font = 'bold 120px "LXGW WenKai", serif';
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+
+                // Use proper quotation marks
+                ctx.fillText("「", centerX - this.measureTextWidth(ctx, sentence, this.fonts.content) / 2 - 80, centerY - 40);
+                ctx.fillText("」", centerX + this.measureTextWidth(ctx, sentence, this.fonts.content) / 2 + 80, centerY + 40);
+
+                // Draw sentence
+                ctx.font = this.fonts.content;
+                ctx.fillStyle = this.colors.text;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+
+                // Handle text wrapping
+                this.drawWrappedText(ctx, sentence, centerX, centerY, width * 0.7);
+            },
+
+            /**
+             * Draw user information
+             */
+            drawUserInfo(ctx, username, width, height) {
+                const padding = width * 0.07;
+
+                // Draw user avatar placeholder
+                const avatarX = padding;
+                const avatarY = padding;
+                const avatarSize = 80;
+
+                ctx.fillStyle = this.colors.primary;
+                ctx.beginPath();
+                ctx.arc(avatarX + avatarSize / 2, avatarY + avatarSize / 2, avatarSize / 2, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Draw user icon
+                ctx.fillStyle = 'white';
+                ctx.font = 'bold 40px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText("用", avatarX + avatarSize / 2, avatarY + avatarSize / 2 - 4);
+
+                // Draw username
+                ctx.font = this.fonts.subtitle;
+                ctx.fillStyle = this.colors.text;
+                ctx.textAlign = 'left';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(`${username}`, avatarX + avatarSize + 20, avatarY + avatarSize / 2);
+
+                // Draw date
+                const today = new Date();
+                const dateStr = `${today.getFullYear()}.${String(today.getMonth() + 1).padStart(2, '0')}.${String(today.getDate()).padStart(2, '0')}`;
+
+                ctx.font = this.fonts.small;
+                ctx.fillStyle = this.colors.light;
+                ctx.textAlign = 'right';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(dateStr, width - padding, padding + avatarSize / 2);
+            },
+
+            /**
+             * Draw score badge
+             */
+            drawScoreBadge(ctx, score, isHighScore, width) {
+                const badgeX = width - 140;
+                const badgeY = 200;
+                const badgeWidth = 180;
+                const badgeHeight = 90;
+
+                // Draw badge background
+                ctx.fillStyle = isHighScore ? 'rgba(255, 215, 0, 0.2)' : 'rgba(0, 106, 220, 0.1)';
+                ctx.beginPath();
+                ctx.roundRect(badgeX - badgeWidth / 2, badgeY - badgeHeight / 2, badgeWidth, badgeHeight, 15);
+                ctx.fill();
+
+                // Draw badge border
+                ctx.strokeStyle = isHighScore ? this.colors.gold : this.colors.primary;
+                ctx.lineWidth = 3;
+                ctx.beginPath();
+                ctx.roundRect(badgeX - badgeWidth / 2, badgeY - badgeHeight / 2, badgeWidth, badgeHeight, 15);
+                ctx.stroke();
+
+                // Draw score text
+                ctx.font = this.fonts.score;
+                ctx.fillStyle = isHighScore ? '#9b7807' : this.colors.primary;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(`${score.toFixed(1)}分`, badgeX, badgeY);
+
+                // Add star icon
+                if (isHighScore) {
+                    this.drawStar(ctx, badgeX - 50, badgeY - 50, 30, this.colors.gold);
+                }
+            },
+
+            /**
+             * Draw footer with logo
+             */
+            drawFooter(ctx, width, height) {
+                const footerY = height - 100;
+
+                // Draw line separator
+                ctx.strokeStyle = 'rgba(0, 0, 0, 0.1)';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(width * 0.1, footerY - 50);
+                ctx.lineTo(width * 0.9, footerY - 50);
+                ctx.stroke();
+
+                // Draw footer text
+                ctx.font = this.fonts.small;
+                ctx.fillStyle = this.colors.light;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('G122班级屏幕句子投稿 - 让美好的文字传递下去', width / 2, footerY);
+
+                // Draw website
+                ctx.font = 'italic 30px "LXGW WenKai", sans-serif';
+                ctx.fillStyle = this.colors.secondary;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('a.com', width / 2, footerY + 40);
+            },
+
+            /**
+             * Draw multi-share header with user info and stats
+             */
+            drawMultiShareHeader(ctx, username, stats, width, height) {
+                const padding = width * 0.07;
+                const headerY = padding * 3;
+
+                // Draw title
+                ctx.font = this.fonts.title;
+                ctx.fillStyle = this.colors.text;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('我的G122句子投稿', width / 2, headerY);
+
+                // Draw subtitle with username
+                ctx.font = this.fonts.subtitle;
+                ctx.fillStyle = this.colors.primary;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(`用户: ${username}`, width / 2, headerY + 100);
+
+                // Draw stats section
+                const statsY = headerY + 200;
+                const statsBoxWidth = 200;
+                const statsBoxHeight = 150;
+                const statsGap = 50;
+
+                const statsData = [
+                    { label: '总提交数', value: stats.totalSubmitted },
+                    { label: '高分句子', value: stats.highScoreCount },
+                    { label: '平均分数', value: stats.avgScore },
+                    { label: '额外次数', value: stats.bonusEarned }
+                ];
+
+                // Calculate starting position for centered stats boxes
+                const totalWidth = (statsBoxWidth * statsData.length) + (statsGap * (statsData.length - 1));
+                let startX = (width - totalWidth) / 2;
+
+                // Draw stats boxes
+                statsData.forEach((stat, index) => {
+                    const boxX = startX + (index * (statsBoxWidth + statsGap));
+
+                    // Draw box
+                    ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+                    ctx.beginPath();
+                    ctx.roundRect(boxX, statsY, statsBoxWidth, statsBoxHeight, 15);
+                    ctx.fill();
+
+                    // Draw border
+                    ctx.strokeStyle = index % 2 === 0 ? this.colors.primary : this.colors.secondary;
+                    ctx.lineWidth = 3;
+                    ctx.beginPath();
+                    ctx.roundRect(boxX, statsY, statsBoxWidth, statsBoxHeight, 15);
+                    ctx.stroke();
+
+                    // Draw value
+                    ctx.font = 'bold 60px "LXGW WenKai", sans-serif';
+                    ctx.fillStyle = index % 2 === 0 ? this.colors.primary : this.colors.secondary;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText(stat.value, boxX + statsBoxWidth / 2, statsY + statsBoxHeight / 2 - 15);
+
+                    // Draw label
+                    ctx.font = this.fonts.small;
+                    ctx.fillStyle = this.colors.light;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText(stat.label, boxX + statsBoxWidth / 2, statsY + statsBoxHeight - 30);
+                });
+
+                // Draw separator
+                ctx.strokeStyle = 'rgba(0, 0, 0, 0.1)';
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(width * 0.15, statsY + statsBoxHeight + 50);
+                ctx.lineTo(width * 0.85, statsY + statsBoxHeight + 50);
+                ctx.stroke();
+
+                // Draw sentences section title
+                ctx.font = 'bold 50px "LXGW WenKai", sans-serif';
+                ctx.fillStyle = this.colors.text;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('我的精选句子', width / 2, statsY + statsBoxHeight + 100);
+            },
+
+            /**
+             * Draw multi-share sentences
+             */
+            drawMultiShareSentences(ctx, sentences, width, height) {
+                const startY = 800;
+                const sentenceHeight = 200;
+                const padding = width * 0.07;
+                const sentenceWidth = width - (padding * 2);
+
+                // Limit to 5 sentences
+                const displaySentences = sentences.slice(0, 5);
+
+                // Draw each sentence
+                displaySentences.forEach((sentence, index) => {
+                    const y = startY + (index * sentenceHeight);
+
+                    // Get score info
+                    const scoreInfo = SentenceManager.getSentenceScoreInfo(sentence);
+                    const isHighScore = scoreInfo && scoreInfo.isHighScore;
+
+                    // Draw sentence background
+                    ctx.fillStyle = isHighScore ? 'rgba(255, 215, 0, 0.1)' : 'rgba(255, 255, 255, 0.8)';
+                    ctx.beginPath();
+                    ctx.roundRect(padding, y, sentenceWidth, sentenceHeight - 20, 15);
+                    ctx.fill();
+
+                    // Draw left accent bar
+                    ctx.fillStyle = isHighScore ? this.colors.gold : this.colors.primary;
+                    ctx.beginPath();
+                    ctx.roundRect(padding, y, 10, sentenceHeight - 20, 5);
+                    ctx.fill();
+
+                    // Draw sentence number
+                    ctx.font = 'bold 40px "LXGW WenKai", sans-serif';
+                    ctx.fillStyle = isHighScore ? this.colors.gold : this.colors.primary;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText(`${index + 1}`, padding + 50, y + sentenceHeight / 2 - 10);
+
+                    // Draw quotation marks
+                    ctx.font = 'bold 40px "LXGW WenKai", serif';
+                    ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+                    ctx.textAlign = 'left';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText("「", padding + 80, y + sentenceHeight / 2 - 40);
+
+                    // Draw sentence text
+                    ctx.font = 'bold 40px "LXGW WenKai", sans-serif';
+                    ctx.fillStyle = this.colors.text;
+                    ctx.textAlign = 'left';
+                    ctx.textBaseline = 'middle';
+
+                    if (sentence.length > 25) {
+                        const firstPart = sentence.substring(0, 25);
+                        const secondPart = sentence.substring(25);
+                        ctx.fillText(firstPart, padding + 120, y + sentenceHeight / 2 - 25);
+                        ctx.fillText(secondPart, padding + 120, y + sentenceHeight / 2 + 25);
+                    } else {
+                        ctx.fillText(sentence, padding + 120, y + sentenceHeight / 2);
+                    }
+
+                    // Draw closing quotation mark
+                    const textWidth = this.measureTextWidth(ctx, sentence, 'bold 40px "LXGW WenKai", sans-serif');
+                    const quoteX = Math.min(padding + 120 + textWidth + 10, width - padding - 50);
+
+                    ctx.font = 'bold 40px "LXGW WenKai", serif';
+                    ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+                    ctx.textAlign = 'left';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText("」", quoteX, y + sentenceHeight / 2 + 40);
+
+                    // Draw score if available
+                    if (scoreInfo && scoreInfo.score !== null) {
+                        ctx.font = 'bold 40px "LXGW WenKai", sans-serif';
+                        ctx.fillStyle = isHighScore ? this.colors.gold : this.colors.primary;
+                        ctx.textAlign = 'right';
+                        ctx.textBaseline = 'middle';
+
+                        const scoreText = `${scoreInfo.score.toFixed(1)}分`;
+                        ctx.fillText(scoreText, width - padding - 20, y + sentenceHeight / 2);
+
+                        // Draw star icon for high scores
+                        if (isHighScore) {
+                            this.drawStar(ctx, width - padding - 100, y + 40, 20, this.colors.gold);
+                        }
+                    }
+                });
+            },
+
+            /**
+             * Add decorative elements to the image
+             */
+            addDecorativeElements(ctx, width, height, isHighScore) {
+                // Colors based on score
+                const primaryColor = isHighScore ? this.colors.lightGold : this.colors.lightBlue;
+                const accentColor = isHighScore ? this.colors.gold : this.colors.primary;
+
+                // Draw corner decorations
+                const cornerSize = 100;
+
+                // Top left
+                this.drawCornerDecoration(ctx, 0, 0, cornerSize, primaryColor, 'top-left');
+
+                // Top right
+                this.drawCornerDecoration(ctx, width, 0, cornerSize, primaryColor, 'top-right');
+
+                // Bottom left
+                this.drawCornerDecoration(ctx, 0, height, cornerSize, primaryColor, 'bottom-left');
+
+                // Bottom right
+                this.drawCornerDecoration(ctx, width, height, cornerSize, primaryColor, 'bottom-right');
+
+                // Add floating elements
+                for (let i = 0; i < 10; i++) {
+                    const x = Math.random() * width;
+                    const y = Math.random() * height;
+                    const size = Math.random() * 10 + 5;
+
+                    if (Math.random() > 0.5) {
+                        // Draw star
+                        this.drawStar(ctx, x, y, size, accentColor, 0.3);
+                    } else {
+                        // Draw circle
+                        ctx.fillStyle = accentColor;
+                        ctx.globalAlpha = 0.3;
+                        ctx.beginPath();
+                        ctx.arc(x, y, size, 0, Math.PI * 2);
+                        ctx.fill();
+                        ctx.globalAlpha = 1;
+                    }
+                }
+            },
+
+            /**
+             * Add subtle texture overlay
+             */
+            addTextureOverlay(ctx, width, height) {
+                ctx.globalAlpha = 0.02;
+                ctx.fillStyle = '#000000';
+
+                // Create noise texture
+                for (let i = 0; i < width; i += 4) {
+                    for (let j = 0; j < height; j += 4) {
+                        if (Math.random() > 0.5) {
+                            ctx.fillRect(i, j, 2, 2);
+                        }
+                    }
+                }
+
+                ctx.globalAlpha = 1;
+            },
+
+            /**
+             * Draw star shape
+             */
+            drawStar(ctx, cx, cy, size, color, alpha = 1) {
+                const spikes = 5;
+                const outerRadius = size;
+                const innerRadius = size / 2;
+
+                let rot = Math.PI / 2 * 3;
+                let x = cx;
+                let y = cy;
+                const step = Math.PI / spikes;
+
+                ctx.beginPath();
+                ctx.globalAlpha = alpha;
+                ctx.fillStyle = color;
+
+                for (let i = 0; i < spikes; i++) {
+                    x = cx + Math.cos(rot) * outerRadius;
+                    y = cy + Math.sin(rot) * outerRadius;
+                    ctx.lineTo(x, y);
+                    rot += step;
+
+                    x = cx + Math.cos(rot) * innerRadius;
+                    y = cy + Math.sin(rot) * innerRadius;
+                    ctx.lineTo(x, y);
+                    rot += step;
+                }
+
+                ctx.lineTo(cx + Math.cos(Math.PI / 2 * 3) * outerRadius, cy + Math.sin(Math.PI / 2 * 3) * outerRadius);
+                ctx.closePath();
+                ctx.fill();
+                ctx.globalAlpha = 1;
+            },
+
+            /**
+             * Draw corner decoration
+             */
+            drawCornerDecoration(ctx, x, y, size, color, position) {
+                ctx.fillStyle = color;
+
+                ctx.beginPath();
+
+                switch (position) {
+                    case 'top-left':
+                        ctx.moveTo(x, y);
+                        ctx.lineTo(x + size, y);
+                        ctx.lineTo(x, y + size);
+                        break;
+
+                    case 'top-right':
+                        ctx.moveTo(x, y);
+                        ctx.lineTo(x - size, y);
+                        ctx.lineTo(x, y + size);
+                        break;
+
+                    case 'bottom-left':
+                        ctx.moveTo(x, y);
+                        ctx.lineTo(x + size, y);
+                        ctx.lineTo(x, y - size);
+                        break;
+
+                    case 'bottom-right':
+                        ctx.moveTo(x, y);
+                        ctx.lineTo(x - size, y);
+                        ctx.lineTo(x, y - size);
+                        break;
+                }
+
+                ctx.closePath();
+                ctx.fill();
+            },
+
+            /**
+             * Draw text with wrapping
+             */
+            drawWrappedText(ctx, text, x, y, maxWidth) {
+                ctx.save();
+
+                // Set font for measurement
+                ctx.font = this.fonts.content;
+
+                // For Chinese text, we can estimate the number of characters per line
+                const charactersPerLine = Math.floor(maxWidth / (ctx.measureText('我').width * 1.1));
+
+                // Split text into lines
+                const lines = [];
+                for (let i = 0; i < text.length; i += charactersPerLine) {
+                    lines.push(text.substr(i, charactersPerLine));
+                }
+
+                // Calculate vertical spacing
+                const lineHeight = parseInt(this.fonts.content) * 1.3;
+
+                // Draw each line
+                const totalHeight = lines.length * lineHeight;
+                const startY = y - (totalHeight / 2) + (lineHeight / 2);
+
+                lines.forEach((line, index) => {
+                    ctx.fillText(line, x, startY + (index * lineHeight));
+                });
+
+                ctx.restore();
+            },
+
+            /**
+             * Measure text width with specific font
+             */
+            measureTextWidth(ctx, text, font) {
+                // Set font for measurement
+                this.measureCtx.font = font;
+                return this.measureCtx.measureText(text).width;
+            },
+
+            /**
+             * Download share image using a modern, compatible approach
+             */
+            downloadShareImage() {
+                const sentence = document.getElementById('share-sentence-select').value;
+                if (!sentence) {
+                    UIManager.showNotification('请先选择一个句子', 'warning');
+                    return;
+                }
+
+                try {
+                    // Generate image
+                    const canvas = this.generateShareImage(sentence);
+                    if (!canvas) {
+                        throw new Error('Canvas generation failed');
+                    }
+
+                    // Convert to blob with high quality
+                    canvas.toBlob(blob => {
+                        if (!blob) {
+                            throw new Error('Blob creation failed');
+                        }
+
+                        try {
+                            // Create object URL
+                            const url = URL.createObjectURL(blob);
+
+                            // Create download link
+                            const link = document.createElement('a');
+                            link.href = url;
+                            link.download = 'G122句子分享.png';
+                            document.body.appendChild(link);
+
+                            // Trigger download
+                            link.click();
+
+                            // Clean up
+                            setTimeout(() => {
+                                document.body.removeChild(link);
+                                URL.revokeObjectURL(url);
+                            }, 100);
+
+                            UIManager.showNotification('图片已成功下载', 'success');
+                        } catch (e) {
+                            this.fallbackDownload(canvas);
+                        }
+                    }, 'image/png', 1.0);
+                } catch (error) {
+                    console.error('Image download error:', error);
+                    UIManager.showNotification('图片下载失败，请重试', 'error');
+
+                    // Try fallback method
+                    this.fallbackDownload(document.querySelector('#share-image-view-container canvas'));
+                }
+            },
+
+            /**
+             * Download multi-share image
+             */
+            downloadMultiShareImage() {
+                const selectedSentences = Array.from(
+                    document.querySelectorAll('.multi-share-checkbox:checked')
+                ).map(cb => cb.getAttribute('data-sentence'));
+
+                if (selectedSentences.length === 0) {
+                    UIManager.showNotification('请至少选择一个句子', 'warning');
+                    return;
+                }
+
+                try {
+                    // Generate image
+                    const canvas = this.generateMultiShareImage(selectedSentences);
+                    if (!canvas) {
+                        throw new Error('Canvas generation failed');
+                    }
+
+                    // Convert to blob with high quality
+                    canvas.toBlob(blob => {
+                        if (!blob) {
+                            throw new Error('Blob creation failed');
+                        }
+
+                        try {
+                            // Create object URL
+                            const url = URL.createObjectURL(blob);
+
+                            // Create download link
+                            const link = document.createElement('a');
+                            link.href = url;
+                            link.download = 'G122句子集合分享.png';
+                            document.body.appendChild(link);
+
+                            // Trigger download
+                            link.click();
+
+                            // Clean up
+                            setTimeout(() => {
+                                document.body.removeChild(link);
+                                URL.revokeObjectURL(url);
+                            }, 100);
+
+                            UIManager.showNotification('图片已成功下载', 'success');
+                        } catch (e) {
+                            this.fallbackDownload(canvas);
+                        }
+                    }, 'image/png', 1.0);
+                } catch (error) {
+                    console.error('Image download error:', error);
+                    UIManager.showNotification('图片下载失败，请重试', 'error');
+
+                    // Try fallback method
+                    this.fallbackDownload(document.querySelector('#share-image-view-container canvas'));
+                }
+            },
+
+            /**
+             * Fallback download method using data URL
+             */
+            fallbackDownload(canvas) {
+                try {
+                    if (!canvas) {
+                        throw new Error('No canvas element found');
+                    }
+
+                    // Create data URL
+                    const dataURL = canvas.toDataURL('image/png');
+
+                    // Create a new window or tab with the image
+                    const newWindow = window.open();
+                    if (!newWindow) {
+                        UIManager.showNotification('请允许弹出窗口后重试', 'warning');
+                        return;
+                    }
+
+                    // Write HTML for the image
+                    newWindow.document.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>G122句子分享</title>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <style>
+                        body {
+                            margin: 0;
+                            padding: 20px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            font-family: sans-serif;
+                            background-color: #f5f5f5;
+                        }
+                        img {
+                            max-width: 100%;
+                            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+                            border-radius: 10px;
+                        }
+                        .instructions {
+                            margin-top: 20px;
+                            text-align: center;
+                            color: #666;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <img src="${dataURL}" alt="G122句子分享">
+                    <div class="instructions">
+                        <p>右键点击图片选择"图片另存为..."来保存图片</p>
+                        <p>或长按图片选择"保存图片"</p>
+                    </div>
+                </body>
+                </html>
+            `);
+
+                    UIManager.showNotification('请在新窗口中右键保存图片', 'info');
+                } catch (error) {
+                    console.error('Fallback download error:', error);
+                    UIManager.showNotification('图片下载失败，请截图保存', 'error');
+                }
+            }
+        };
+
+        // Initialize the share image generator
+        document.addEventListener("DOMContentLoaded", () => {
+            ShareImageGenerator.init();
+
+            // Replace the old download handlers with the new ones
+            const downloadBtn = document.getElementById('share-download');
+            if (downloadBtn) {
+                downloadBtn.removeEventListener('click', UIManager.downloadShareImage);
+                downloadBtn.addEventListener('click', () => ShareImageGenerator.downloadShareImage());
+            }
+
+            const multiDownloadBtn = document.getElementById('multi-share-download');
+            if (multiDownloadBtn) {
+                multiDownloadBtn.removeEventListener('click', UIManager.downloadMultiShareImage);
+                multiDownloadBtn.addEventListener('click', () => ShareImageGenerator.downloadMultiShareImage());
+            }
+
+            // Replace view handlers
+            const viewBtn = document.getElementById('share-view');
+            if (viewBtn) {
+                viewBtn.removeEventListener('click', UIManager.showShareViewModal);
+                viewBtn.addEventListener('click', () => {
+                    const sentence = document.getElementById('share-sentence-select').value;
+                    if (!sentence) {
+                        UIManager.showNotification('请先选择一个句子', 'warning');
+                        return;
+                    }
+
+                    const modal = document.getElementById('share-view-modal');
+                    const container = document.getElementById('share-image-view-container');
+                    container.innerHTML = '';
+
+                    // Generate share image
+                    ShareImageGenerator.generateShareImage(sentence, true);
+
+                    // Show modal
+                    modal.classList.add('visible');
+                });
+            }
+
+            const multiViewBtn = document.getElementById('multi-share-view');
+            if (multiViewBtn) {
+                multiViewBtn.removeEventListener('click', UIManager.showMultiShareViewModal);
+                multiViewBtn.addEventListener('click', () => {
+                    const selectedSentences = Array.from(
+                        document.querySelectorAll('.multi-share-checkbox:checked')
+                    ).map(cb => cb.getAttribute('data-sentence'));
+
+                    if (selectedSentences.length === 0) {
+                        UIManager.showNotification('请至少选择一个句子', 'warning');
+                        return;
+                    }
+
+                    const modal = document.getElementById('share-view-modal');
+                    const container = document.getElementById('share-image-view-container');
+                    container.innerHTML = '';
+
+                    // Generate multi-share image
+                    ShareImageGenerator.generateMultiShareImage(selectedSentences, true);
+
+                    // Show modal
+                    modal.classList.add('visible');
+                });
+            }
+        });
+        </script>
 </body>
 </html>
